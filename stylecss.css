@@ -1,0 +1,80 @@
+
+#grillaIndex{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 10% 1fr 1fr 1fr 1fr 1fr 10%;
+    grid-template-areas: "header header header header"
+                         "main main main main"
+                         "main main main main"
+                         "main main main main"
+                         "main main main main"
+                         "main main main main"
+                         "footer footer footer footer";
+    align-items: center;
+    text-align: center;
+}
+
+header{
+    grid-area: header;
+}
+
+footer{
+    grid-area: footer;
+}
+
+#grillaIndexM{
+    grid-area: main;
+    display: grid;
+    grid-template-columns:25% 25% 25% 25%;
+    grid-template-rows: 25% 25% 25% 25%;
+    grid-template-areas: "video video texto texto"
+                         "video video texto texto"
+                         "titulo titulo titulo titulo"
+                         "cliente1 cliente2 cliente3 cliente4"
+                         "cliente5 cliente6 clliente7 cliente8";
+}
+.videoInicio{
+    grid-area: video;
+}
+
+.textoInicio{
+    grid-area: texto;
+}
+
+.tituloI{
+    grid-area: titulo;
+}
+
+.cliente1{
+    grid-area: cliente1;
+}
+.cliente2{
+    grid-area: cliente2;
+}
+.cliente3{
+    grid-area: cliente3;
+}
+.cliente4{
+    grid-area: cliente4;
+}
+.cliente5{
+    grid-area: cliente5;
+}
+.cliente6{
+    grid-area: cliente6;
+}
+.cliente7{
+    grid-area: cliente7;
+}
+.cliente8{
+    grid-area: cliente8;
+}
+
+
+#grillaIndexM img{
+    grid-area: video;
+}
+
+#grillaIndexM p{
+    grid-area: texto;
+}
