@@ -1,0 +1,85 @@
+body {
+  height: 100%; }
+
+.navbar {
+  width: 100%;
+  margin-bottom: 5%;
+  align-items: flex-start; }
+  .navbar img {
+    width: 10%;
+    text-align: left; }
+  .navbar ul {
+    width: 50%; }
+
+.navbar {
+  width: 100%;
+  margin-bottom: 5%;
+  align-items: flex-start; }
+  .navbar img {
+    width: 10%;
+    text-align: left; }
+  .navbar ul {
+    width: 50%; }
+
+.videoInicio {
+  width: 30%;
+  height: 30%; }
+
+footer {
+  background-color: blue;
+  width: 100%;
+  height: auto; }
+  footer p {
+    color: black; }
+
+@media only screen and (min-width: 600px) {
+  #grillaIndex {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 10% 1fr 1fr 1fr 1fr 1fr 1fr 10%;
+    grid-template-areas: "navbar navbar navbar navbar"
+ "main main main main"
+ "main main main main"
+ "main main main main"
+ "main main main main"
+ "main main main main"
+ "footer footer footer footer"; }
+    #grillaIndex .navbar {
+      grid-area: navbar; }
+    #grillaIndex footer {
+      grid-area: footer; }
+    #grillaIndex #grillaIndexM {
+      grid-area: main;
+      display: grid;
+      grid-template-columns: 25% 25% 25% 25%;
+      grid-template-rows: 10em 10em 5% 15em 15em;
+      grid-template-areas: "video video presentacion presentacion"
+ "video video presentacion presentacion"
+ "titulo titulo titulo titulo"
+ "cliente1 cliente2 cliente3 cliente4"
+ "cliente5 cliente6 cliente7 cliente8";
+      justify-items: center;
+      align-items: center;
+      text-align: center; }
+      #grillaIndex #grillaIndexM .videoInicio {
+        grid-area: video; }
+      #grillaIndex #grillaIndexM .textoInicio {
+        grid-area: presentacion; }
+      #grillaIndex #grillaIndexM .tituloI {
+        grid-area: titulo; }
+      #grillaIndex #grillaIndexM .cliente1 {
+        grid-area: cliente1; }
+      #grillaIndex #grillaIndexM .cliente2 {
+        grid-area: cliente2; }
+      #grillaIndex #grillaIndexM .cliente3 {
+        grid-area: cliente3; }
+      #grillaIndex #grillaIndexM .cliente4 {
+        grid-area: cliente4; }
+      #grillaIndex #grillaIndexM .cliente5 {
+        grid-area: cliente5; }
+      #grillaIndex #grillaIndexM .cliente6 {
+        grid-area: cliente6; }
+      #grillaIndex #grillaIndexM .cliente7 {
+        grid-area: cliente7; }
+      #grillaIndex #grillaIndexM .cliente8 {
+        grid-area: cliente8; } }

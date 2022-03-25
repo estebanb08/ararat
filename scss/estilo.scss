@@ -1,0 +1,143 @@
+@mixin tamaños($width, $height){
+    width: $width;
+    height: $height;
+}
+
+@mixin posicionamiento-items{
+    justify-items: center;
+    align-items: center;
+    text-align: center; 
+}
+
+body{
+    height: 100%;
+}
+.navbar{
+    width: 100%;
+    margin-bottom: 5%;
+    align-items: flex-start;
+    
+    img{
+        width: 10%;
+        text-align: left;
+    }
+
+    ul{
+        width: 50%;
+    }
+}
+
+// INDEX
+.navbar{
+    width: 100%;
+    margin-bottom: 5%;
+    align-items: flex-start;
+    
+    img{
+        width: 10%;
+        text-align: left;
+    }
+
+    ul{
+        width: 50%;
+    }
+}
+
+.videoInicio{
+    @include tamaños(30%, 30%);
+}
+
+
+// footer
+footer{
+    background-color: blue;
+    @include tamaños(100%, auto);
+
+    p{
+        color:black;
+    }
+}
+
+
+@media only screen and (min-width:600px){
+
+
+
+#grillaIndex{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 10% 1fr 1fr 1fr 1fr 1fr 1fr 10%;
+    grid-template-areas: "navbar navbar navbar navbar"
+                         "main main main main"
+                         "main main main main"
+                         "main main main main"
+                         "main main main main"
+                         "main main main main"
+                         "footer footer footer footer";
+    .navbar{
+        grid-area: navbar;
+    }
+
+    footer{
+        grid-area: footer;
+    }
+
+    #grillaIndexM{
+        grid-area: main;
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-rows: 10em 10em 5% 15em 15em;
+        grid-template-areas:"video video presentacion presentacion"
+                            "video video presentacion presentacion"
+                            "titulo titulo titulo titulo"
+                            "cliente1 cliente2 cliente3 cliente4"
+                            "cliente5 cliente6 cliente7 cliente8";
+        @include posicionamiento-items();
+
+        .videoInicio{
+            grid-area: video;
+        }
+
+        .textoInicio{
+            grid-area: presentacion;
+        }
+
+        .tituloI{
+            grid-area: titulo;
+        }
+
+        .cliente1{
+            grid-area: cliente1;
+        }
+        .cliente2{
+            grid-area: cliente2;
+        }
+        .cliente3{
+            grid-area: cliente3;
+        }
+        .cliente4{
+            grid-area: cliente4;
+        }
+        .cliente5{
+            grid-area: cliente5;
+        }
+        .cliente6{
+            grid-area: cliente6;
+        }
+        .cliente7{
+            grid-area: cliente7;
+        }
+        .cliente8{
+            grid-area: cliente8;
+        }
+    }
+
+}
+
+
+
+
+
+
+
+}
