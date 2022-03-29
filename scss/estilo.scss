@@ -1,3 +1,5 @@
+@import "colores.scss";
+
 @mixin tamaños($width, $height){
     width: $width;
     height: $height;
@@ -7,6 +9,14 @@
     justify-items: center;
     align-items: center;
     text-align: center; 
+}
+
+@mixin agrandaElemento{
+    transition: all .3s;
+
+    &:hover{
+        transform: scale(1.15,1.15);
+    }
 }
 
 body{
@@ -24,37 +34,95 @@ body{
 
     ul{
         width: 50%;
+        li{
+            padding: 2px;
+        }
     }
 }
 
 // INDEX
-.navbar{
-    width: 100%;
-    margin-bottom: 5%;
-    align-items: flex-start;
-    
-    img{
-        width: 10%;
-        text-align: left;
-    }
-
-    ul{
-        width: 50%;
-    }
-}
 
 .videoInicio{
-    @include tamaños(30%, 30%);
+    @include tamaños(100%, 100%);
+}
+
+
+
+#grillaIndexM{
+
+    div{
+        @include agrandaElemento();
+        border: solid black 2px;
+        @include tamaños(80%, 70%);
+        @include posicionamiento-items();
+        
+        img{
+            @include tamaños(90%, 30%);
+            padding: 2%;
+        }
+
+        svg{
+            padding: 5%;
+        }
+        p{
+            padding: 1%;
+        }
+    }
 }
 
 
 // footer
 footer{
-    background-color: blue;
-    @include tamaños(100%, auto);
+    background-color: rgb(36, 127, 155);
+    @include tamaños(100%, 20em);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "listaContacto nada listaNav";
 
-    p{
-        color:black;
+
+    .listadoIzq{ 
+        grid-area: listaContacto;
+        margin-top: 5%;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+
+        li{
+            display: flex;
+            flex-direction: row;
+            padding: .5em;
+
+            img{
+                @include tamaños(25%, 85%);
+            }
+
+            svg{
+                position: relative;
+                right: .5em;
+                top: .2em;    
+            }
+        }
+    }
+
+    .listadoNav{
+        grid-area: listaNav;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+
+
+        li{
+            padding: 3%;
+        }
+        a{
+            text-decoration: none; 
+            color: black;
+        }
+        
+
     }
 }
 
@@ -66,7 +134,7 @@ footer{
 #grillaIndex{
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: 10% 1fr 1fr 1fr 1fr 1fr 1fr 10%;
+    grid-template-rows: 10% 1fr 1fr 1fr 1fr 1fr 8em;
     grid-template-areas: "navbar navbar navbar navbar"
                          "main main main main"
                          "main main main main"
@@ -86,7 +154,7 @@ footer{
         grid-area: main;
         display: grid;
         grid-template-columns: 25% 25% 25% 25%;
-        grid-template-rows: 10em 10em 5% 15em 15em;
+        grid-template-rows: 13em 10em 5% 30em 30em;
         grid-template-areas:"video video presentacion presentacion"
                             "video video presentacion presentacion"
                             "titulo titulo titulo titulo"
@@ -103,6 +171,7 @@ footer{
         }
 
         .tituloI{
+            margin-top: 5%;
             grid-area: titulo;
         }
 
