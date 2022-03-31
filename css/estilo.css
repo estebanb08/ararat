@@ -13,40 +13,16 @@ body {
     .navbar ul li {
       padding: 2px; }
 
-.videoInicio {
-  width: 100%;
-  height: 100%; }
-
-#grillaIndexM div {
-  transition: all .3s;
-  border: solid black 2px;
-  width: 80%;
-  height: 70%;
-  justify-items: center;
-  align-items: center;
-  text-align: center; }
-  #grillaIndexM div:hover {
-    transform: scale(1.15, 1.15); }
-  #grillaIndexM div img {
-    width: 90%;
-    height: 30%;
-    padding: 2%; }
-  #grillaIndexM div svg {
-    padding: 5%; }
-  #grillaIndexM div p {
-    padding: 1%; }
-
 footer {
   background-color: #247f9b;
   width: 100%;
-  height: 20em;
+  height: 15em;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
   grid-template-areas: "listaContacto nada listaNav"; }
   footer .listadoIzq {
     grid-area: listaContacto;
-    margin-top: 5%;
     list-style: none;
     display: flex;
     flex-direction: column;
@@ -74,18 +50,88 @@ footer {
       text-decoration: none;
       color: black; }
 
+.videoInicio {
+  width: 100%;
+  height: 100%; }
+
+#grillaIndexM div {
+  transition: all .3s;
+  border: solid lightgray 1px;
+  border-bottom: solid #b6b6b6 2px;
+  width: 80%;
+  height: 70%;
+  justify-items: center;
+  align-items: center;
+  text-align: center; }
+  #grillaIndexM div:hover {
+    transform: scale(1.15, 1.15); }
+  #grillaIndexM div img {
+    width: 90%;
+    height: 30%;
+    padding: 2%; }
+  #grillaIndexM div svg {
+    padding: 5%; }
+  #grillaIndexM div p {
+    padding: 1%; }
+
+#grillaClientes #grillaClientesM .imagenPresentacion img {
+  width: 100%;
+  height: 100%; }
+
+#grillaClientes #grillaClientesM .cliente-Clientes1 {
+  transition: all .3s;
+  background-color: #63beda; }
+  #grillaClientes #grillaClientesM .cliente-Clientes1:hover {
+    transform: scale(1.01, 1.01); }
+
+#grillaClientes #grillaClientesM .cliente-Clientes2 {
+  transition: all .3s;
+  background-color: #63beda; }
+  #grillaClientes #grillaClientesM .cliente-Clientes2:hover {
+    transform: scale(1.01, 1.01); }
+
+#grillaClientes #grillaClientesM .cliente-Clientes3 {
+  transition: all .3s;
+  background-color: #63beda; }
+  #grillaClientes #grillaClientesM .cliente-Clientes3:hover {
+    transform: scale(1.01, 1.01); }
+
+#grillaClientes #grillaClientesM .cliente-Clientes4 {
+  transition: all .3s;
+  background-color: #63beda; }
+  #grillaClientes #grillaClientesM .cliente-Clientes4:hover {
+    transform: scale(1.01, 1.01); }
+
+#grillaClientes #grillaClientesM .cliente-Clientes5 {
+  transition: all .3s;
+  background-color: #63beda; }
+  #grillaClientes #grillaClientesM .cliente-Clientes5:hover {
+    transform: scale(1.01, 1.01); }
+
+#grillaClientes #grillaClientesM .cliente-Clientes6 {
+  transition: all .3s;
+  background-color: #63beda; }
+  #grillaClientes #grillaClientesM .cliente-Clientes6:hover {
+    transform: scale(1.01, 1.01); }
+
+#grillaClientes #grillaClientesM .cliente-Clientes7 {
+  transition: all .3s;
+  background-color: #63beda; }
+  #grillaClientes #grillaClientesM .cliente-Clientes7:hover {
+    transform: scale(1.01, 1.01); }
+
+#grillaClientes #grillaClientesM .cliente-Clientes8 {
+  transition: all .3s;
+  background-color: #63beda; }
+  #grillaClientes #grillaClientesM .cliente-Clientes8:hover {
+    transform: scale(1.01, 1.01); }
+
 @media only screen and (min-width: 600px) {
   #grillaIndex {
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: 10% 1fr 1fr 1fr 1fr 1fr 8em;
-    grid-template-areas: "navbar navbar navbar navbar"
- "main main main main"
- "main main main main"
- "main main main main"
- "main main main main"
- "main main main main"
- "footer footer footer footer"; }
+    grid-template-rows: 10% 1fr 1fr 1fr 1fr 10%;
+    grid-template-areas: "navbar navbar navbar navbar" "main main main main" "main main main main" "main main main main" "main main main main" "footer footer footer footer"; }
     #grillaIndex .navbar {
       grid-area: navbar; }
     #grillaIndex footer {
@@ -94,12 +140,8 @@ footer {
       grid-area: main;
       display: grid;
       grid-template-columns: 25% 25% 25% 25%;
-      grid-template-rows: 13em 10em 5% 30em 30em;
-      grid-template-areas: "video video presentacion presentacion"
- "video video presentacion presentacion"
- "titulo titulo titulo titulo"
- "cliente1 cliente2 cliente3 cliente4"
- "cliente5 cliente6 cliente7 cliente8";
+      grid-template-rows: 20% 5% 30em 30em;
+      grid-template-areas: "video video presentacion presentacion" "titulo titulo titulo titulo" "cliente1 cliente2 cliente3 cliente4" "cliente5 cliente6 cliente7 cliente8";
       justify-items: center;
       align-items: center;
       text-align: center; }
@@ -125,4 +167,185 @@ footer {
       #grillaIndex #grillaIndexM .cliente7 {
         grid-area: cliente7; }
       #grillaIndex #grillaIndexM .cliente8 {
-        grid-area: cliente8; } }
+        grid-area: cliente8; }
+  #grillaClientes {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 10em 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 10%;
+    grid-template-areas: "header header header header" "main main main main" "main main main main" "main main main main" "main main main main" "main main main main" "main main main main" "main main main main" "main main main main" "main main main main" "footer footer footer footer"; }
+    #grillaClientes .navbar {
+      grid-area: header; }
+    #grillaClientes footer {
+      grid-area: footer; }
+    #grillaClientes #grillaClientesM {
+      grid-area: main;
+      display: grid;
+      grid-template-columns: 25% 25% 25% 25%;
+      grid-template-rows: 1fr 20em 20em 20em 20em 20em 20em 20em 20em;
+      grid-template-areas: "imagen imagen imagen imagen" "cliente1 cliente1 cliente1 cliente1" "cliente2 cliente2 cliente2 cliente2" "cliente3 cliente3 cliente3 cliente3" "cliente4 cliente4 cliente4 cliente4" "cliente5 cliente5 cliente5 cliente5" "cliente6 cliente6 cliente6 cliente6" "cliente7 cliente7 cliente7 cliente7" "cliente8 cliente8 cliente8 cliente8"; }
+    #grillaClientes .imagenPresentacion {
+      grid-area: imagen;
+      position: relative;
+      bottom: 9%; }
+      #grillaClientes .imagenPresentacion img {
+        filter: blur(2px); }
+      #grillaClientes .imagenPresentacion img:hover {
+        filter: blur(0px);
+        transition: all 1s; }
+      #grillaClientes .imagenPresentacion h1 {
+        position: relative;
+        color: white;
+        bottom: 10em;
+        left: 9.1em;
+        font-family: 'Secular One', sans-serif; }
+    #grillaClientes .cliente-Clientes1 {
+      grid-area: cliente1;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 100%;
+      grid-template-areas: "imagen nada texto";
+      margin: 0 3em 3em 7em;
+      justify-items: center;
+      align-items: center;
+      text-align: center; }
+      #grillaClientes .cliente-Clientes1 img {
+        grid-area: imagen; }
+      #grillaClientes .cliente-Clientes1 p {
+        grid-area: texto; }
+    #grillaClientes .cliente-Clientes2 {
+      grid-area: cliente2;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 100%;
+      grid-template-areas: "texto nada imagen";
+      margin: 0 7em 3em 3em;
+      justify-items: center;
+      align-items: center;
+      text-align: center; }
+      #grillaClientes .cliente-Clientes2 img {
+        grid-area: imagen; }
+      #grillaClientes .cliente-Clientes2 p {
+        grid-area: texto; }
+    #grillaClientes .cliente-Clientes3 {
+      grid-area: cliente3;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 100%;
+      grid-template-areas: "imagen nada texto";
+      margin: 0 3em 3em 7em;
+      justify-items: center;
+      align-items: center;
+      text-align: center; }
+      #grillaClientes .cliente-Clientes3 img {
+        grid-area: imagen; }
+      #grillaClientes .cliente-Clientes3 p {
+        grid-area: texto; }
+    #grillaClientes .cliente-Clientes4 {
+      grid-area: cliente4;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 100%;
+      grid-template-areas: "texto nada imagen";
+      margin: 0 7em 3em 3em;
+      justify-items: center;
+      align-items: center;
+      text-align: center; }
+      #grillaClientes .cliente-Clientes4 img {
+        grid-area: imagen; }
+      #grillaClientes .cliente-Clientes4 p {
+        grid-area: texto; }
+    #grillaClientes .cliente-Clientes5 {
+      grid-area: cliente5;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 100%;
+      grid-template-areas: "imagen nada texto";
+      margin: 0 3em 3em 7em;
+      justify-items: center;
+      align-items: center;
+      text-align: center; }
+      #grillaClientes .cliente-Clientes5 img {
+        grid-area: imagen; }
+      #grillaClientes .cliente-Clientes5 p {
+        grid-area: texto; }
+    #grillaClientes .cliente-Clientes6 {
+      grid-area: cliente6;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 100%;
+      grid-template-areas: "texto nada imagen";
+      margin: 0 7em 3em 3em;
+      justify-items: center;
+      align-items: center;
+      text-align: center; }
+      #grillaClientes .cliente-Clientes6 img {
+        grid-area: imagen; }
+      #grillaClientes .cliente-Clientes6 p {
+        grid-area: texto; }
+    #grillaClientes .cliente-Clientes7 {
+      grid-area: cliente7;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 100%;
+      grid-template-areas: "imagen nada texto";
+      margin: 0 3em 3em 7em;
+      justify-items: center;
+      align-items: center;
+      text-align: center; }
+      #grillaClientes .cliente-Clientes7 img {
+        grid-area: imagen; }
+      #grillaClientes .cliente-Clientes7 p {
+        grid-area: texto; }
+    #grillaClientes .cliente-Clientes8 {
+      grid-area: cliente8;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 100%;
+      grid-template-areas: "texto nada imagen";
+      margin: 0 7em 3em 3em;
+      justify-items: center;
+      align-items: center;
+      text-align: center; }
+      #grillaClientes .cliente-Clientes8 img {
+        grid-area: imagen; }
+      #grillaClientes .cliente-Clientes8 p {
+        grid-area: texto; }
+  #grillaCursos {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 10% 1fr 1fr 1fr 1fr 1fr 1fr 10%;
+    grid-template-areas: "header header header header" "main main main main" "main main main main" "main main main main" "main main main main" "main main main main" "main main main main" "footer footer footer footer"; }
+    #grillaCursos .navbar {
+      grid-area: header; }
+    #grillaCursos footer {
+      grid-area: footer; }
+    #grillaCursos #grillaCursosM {
+      grid-area: main;
+      display: grid;
+      grid-template-columns: 25% 25% 25% 25%;
+      grid-template-rows: 30em 4em 80em 40em 1fr 10em;
+      grid-template-areas: "imagen imagen imagen imagen" "titulo titulo titulo titulo" "explicacion explicacion explicacion explicacion" "videoE videoE videoE videoE" "Felici Felici Felici Felici" "boton boton boton boton";
+      justify-items: center;
+      align-items: center;
+      text-align: center; }
+      #grillaCursos #grillaCursosM .imagenCurso {
+        grid-area: imagen; }
+      #grillaCursos #grillaCursosM .titulo {
+        grid-area: titulo; }
+      #grillaCursos #grillaCursosM .parrafo {
+        grid-area: explicacion;
+        background-color: #e6dede;
+        width: 100%;
+        height: 100%; }
+      #grillaCursos #grillaCursosM .video-Imagenes-Parrafo {
+        grid-area: videoE; }
+        #grillaCursos #grillaCursosM .video-Imagenes-Parrafo video {
+          width: 30%;
+          height: 30%; }
+      #grillaCursos #grillaCursosM .finalizacion {
+        grid-area: Felici; }
+      #grillaCursos #grillaCursosM .irAlFormulario {
+        grid-area: boton;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap; } }

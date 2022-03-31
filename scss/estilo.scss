@@ -18,6 +18,13 @@
         transform: scale(1.15,1.15);
     }
 }
+@mixin agrandaElemento-min {
+    transition: all .3s;
+
+    &:hover{
+        transform: scale(1.01,1.01);
+    }
+}
 
 body{
     height: 100%;
@@ -40,41 +47,10 @@ body{
     }
 }
 
-// INDEX
-
-.videoInicio{
-    @include tamaños(100%, 100%);
-}
-
-
-
-#grillaIndexM{
-
-    div{
-        @include agrandaElemento();
-        border: solid black 2px;
-        @include tamaños(80%, 70%);
-        @include posicionamiento-items();
-        
-        img{
-            @include tamaños(90%, 30%);
-            padding: 2%;
-        }
-
-        svg{
-            padding: 5%;
-        }
-        p{
-            padding: 1%;
-        }
-    }
-}
-
-
 // footer
 footer{
     background-color: rgb(36, 127, 155);
-    @include tamaños(100%, 20em);
+    @include tamaños(100%, 15em);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
@@ -83,7 +59,6 @@ footer{
 
     .listadoIzq{ 
         grid-area: listaContacto;
-        margin-top: 5%;
         list-style: none;
         display: flex;
         flex-direction: column;
@@ -127,16 +102,95 @@ footer{
 }
 
 
+
+// INDEX
+
+.videoInicio{
+    @include tamaños(100%, 100%);
+}
+
+
+
+#grillaIndexM{
+
+    div{
+        @include agrandaElemento();
+        border: solid rgb(211, 211, 211) 1px;
+        border-bottom: solid rgb(182, 182, 182) 2px;
+        @include tamaños(80%, 70%);
+        @include posicionamiento-items();
+        
+        img{
+            @include tamaños(90%, 30%);
+            padding: 2%;
+        }
+
+        svg{
+            padding: 5%;
+        }
+        p{
+            padding: 1%;
+        }
+    }
+}
+
+// CLIENTES
+#grillaClientes{
+
+    #grillaClientesM{
+        .imagenPresentacion{
+            img{
+                @include tamaños(100%, 100%)
+            }
+        }
+
+        .cliente-Clientes1{
+            @include agrandaElemento-min();
+            background-color: $colorCLientes;
+        }
+        .cliente-Clientes2{
+            @include agrandaElemento-min();
+            background-color: $colorCLientes;
+        }
+        .cliente-Clientes3{
+            @include agrandaElemento-min();
+            background-color: $colorCLientes;
+        }
+        .cliente-Clientes4{
+            @include agrandaElemento-min();
+            background-color: $colorCLientes;
+        }
+        .cliente-Clientes5{
+            @include agrandaElemento-min();
+            background-color: $colorCLientes;
+        }
+        .cliente-Clientes6{
+            @include agrandaElemento-min();
+            background-color: $colorCLientes;
+        }
+        .cliente-Clientes7{
+            @include agrandaElemento-min();
+            background-color: $colorCLientes;
+        }
+        .cliente-Clientes8{
+            @include agrandaElemento-min();
+            background-color: $colorCLientes;
+        }
+    } 
+}
+
+
+
+
 @media only screen and (min-width:600px){
 
 
 
-#grillaIndex{
+    #grillaIndex{
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: 10% 1fr 1fr 1fr 1fr 1fr 8em;
+    grid-template-rows: 10% 1fr 1fr 1fr 1fr 10%;
     grid-template-areas: "navbar navbar navbar navbar"
-                         "main main main main"
                          "main main main main"
                          "main main main main"
                          "main main main main"
@@ -154,9 +208,8 @@ footer{
         grid-area: main;
         display: grid;
         grid-template-columns: 25% 25% 25% 25%;
-        grid-template-rows: 13em 10em 5% 30em 30em;
+        grid-template-rows: 20% 5% 30em 30em;
         grid-template-areas:"video video presentacion presentacion"
-                            "video video presentacion presentacion"
                             "titulo titulo titulo titulo"
                             "cliente1 cliente2 cliente3 cliente4"
                             "cliente5 cliente6 cliente7 cliente8";
@@ -201,12 +254,200 @@ footer{
         }
     }
 
-}
+    }
+
+
+    #grillaClientes{
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-rows: 10em 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 10%;
+        grid-template-areas: "header header header header"
+                            "main main main main"
+                            "main main main main"
+                            "main main main main"
+                            "main main main main"
+                            "main main main main"
+                            "main main main main"
+                            "main main main main"
+                            "main main main main"
+                            "main main main main"
+                            "footer footer footer footer";
+        .navbar{
+            grid-area: header;
+        }
+
+        footer{
+            grid-area: footer;
+        }
+
+        #grillaClientesM{
+            grid-area: main;
+            display: grid;
+            grid-template-columns: 25% 25% 25% 25%;
+            grid-template-rows: 1fr 20em 20em 20em 20em 20em 20em 20em 20em;
+            grid-template-areas: "imagen imagen imagen imagen"
+                                "cliente1 cliente1 cliente1 cliente1"
+                                "cliente2 cliente2 cliente2 cliente2"
+                                "cliente3 cliente3 cliente3 cliente3"
+                                "cliente4 cliente4 cliente4 cliente4"
+                                "cliente5 cliente5 cliente5 cliente5"
+                                "cliente6 cliente6 cliente6 cliente6"
+                                "cliente7 cliente7 cliente7 cliente7"
+                                "cliente8 cliente8 cliente8 cliente8";
+            
+        }
+        
+        .imagenPresentacion{
+            grid-area: imagen;
+            position: relative;
+            bottom: 9%;
+            img{
+                filter: blur(2px);
+            }
+            img:hover{
+                filter: blur(0px);
+                transition: all 1s;
+            }
+
+            h1{
+                position: relative;
+                color: rgb(255, 255, 255);
+                bottom: 10em;
+                left: 9.1em;
+                font-family: 'Secular One', sans-serif;
+            }
+        }
+
+        @mixin clientesArea{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 100%;
+            grid-template-areas: "imagen nada texto";
+            margin:0 3em 3em 7em;
+            @include posicionamiento-items();
+            img{
+                grid-area: imagen;
+            }
+            p{
+                grid-area: texto;
+            }
+        }
+        @mixin clientesArea2{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 100%;
+            grid-template-areas: "texto nada imagen";
+            margin:0 7em 3em 3em;
+            @include posicionamiento-items();
+            img{
+                grid-area: imagen;
+            }
+            p{
+                grid-area: texto;
+            }
+        }
+        .cliente-Clientes1{
+            grid-area: cliente1;
+            @include clientesArea();
+        }
+        .cliente-Clientes2{
+            grid-area: cliente2;
+            @include clientesArea2();
+        }
+        .cliente-Clientes3{
+            grid-area: cliente3;
+            @include clientesArea();
+        }
+        .cliente-Clientes4{
+            grid-area: cliente4;
+            @include clientesArea2();
+        }
+        .cliente-Clientes5{
+            grid-area: cliente5;
+            @include clientesArea();
+        }
+        .cliente-Clientes6{
+            grid-area: cliente6;
+            @include clientesArea2();
+        }
+        .cliente-Clientes7{
+            grid-area: cliente7;
+            @include clientesArea();
+        }
+        .cliente-Clientes8{
+            grid-area: cliente8;
+            @include clientesArea2();
+        }
+
+    }
 
 
 
+    #grillaCursos{
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-rows: 10% 1fr 1fr 1fr 1fr 1fr 1fr 10%;
+        grid-template-areas: "header header header header"
+                             "main main main main"
+                             "main main main main"
+                             "main main main main"
+                             "main main main main"
+                             "main main main main"
+                             "main main main main"
+                             "footer footer footer footer";
 
+        .navbar{
+            grid-area: header;
+        }
 
+        footer{
+            grid-area: footer;
+        }
+        #grillaCursosM{
+            grid-area: main;
+            display: grid;
+            grid-template-columns: 25% 25% 25% 25%;
+            grid-template-rows: 30em 4em 80em 40em 1fr 10em;
+            grid-template-areas: "imagen imagen imagen imagen"
+                                 "titulo titulo titulo titulo"
+                                 "explicacion explicacion explicacion explicacion"
+                                 "videoE videoE videoE videoE"
+                                 "Felici Felici Felici Felici"
+                                 "boton boton boton boton";
+            @include posicionamiento-items();
+            
+            .imagenCurso{
+                grid-area: imagen;
+            }
 
+            .titulo{
+                grid-area: titulo;
+            }
 
+            .parrafo{
+                grid-area: explicacion;
+                background-color: rgb(230, 222, 222);
+                @include tamaños(100%, 100%);
+            }
+
+            .video-Imagenes-Parrafo{
+                grid-area: videoE;
+
+                video{
+                    @include tamaños(30% , 30%);
+                }
+            }
+
+            .finalizacion{
+                grid-area: Felici;
+            }
+
+            .irAlFormulario{
+                grid-area: boton;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+            }
+        }
+    }
 }
