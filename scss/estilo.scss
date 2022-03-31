@@ -189,7 +189,7 @@ footer{
     #grillaIndex{
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: 10% 1fr 1fr 1fr 1fr 10%;
+    grid-template-rows: 9em 1fr 1fr 1fr 1fr 10%;
     grid-template-areas: "navbar navbar navbar navbar"
                          "main main main main"
                          "main main main main"
@@ -260,7 +260,7 @@ footer{
     #grillaClientes{
         display: grid;
         grid-template-columns: 25% 25% 25% 25%;
-        grid-template-rows: 10em 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 10%;
+        grid-template-rows: 9em 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 10%;
         grid-template-areas: "header header header header"
                             "main main main main"
                             "main main main main"
@@ -386,7 +386,7 @@ footer{
     #grillaCursos{
         display: grid;
         grid-template-columns: 25% 25% 25% 25%;
-        grid-template-rows: 10% 1fr 1fr 1fr 1fr 1fr 1fr 10%;
+        grid-template-rows: 9em 1fr 1fr 1fr 1fr 1fr 1fr 10%;
         grid-template-areas: "header header header header"
                              "main main main main"
                              "main main main main"
