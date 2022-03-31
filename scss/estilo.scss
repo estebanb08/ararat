@@ -50,7 +50,7 @@ body{
 // footer
 footer{
     background-color: rgb(36, 127, 155);
-    @include tamaños(100%, 15em);
+    @include tamaños(100%, 100%);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
@@ -189,7 +189,7 @@ footer{
     #grillaIndex{
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: 9em 1fr 1fr 1fr 1fr 10%;
+    grid-template-rows: 6% 1fr 1fr 1fr 1fr 10%;
     grid-template-areas: "navbar navbar navbar navbar"
                          "main main main main"
                          "main main main main"
@@ -260,7 +260,7 @@ footer{
     #grillaClientes{
         display: grid;
         grid-template-columns: 25% 25% 25% 25%;
-        grid-template-rows: 9em 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 10%;
+        grid-template-rows: 4% 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 10%;
         grid-template-areas: "header header header header"
                             "main main main main"
                             "main main main main"
@@ -284,7 +284,7 @@ footer{
             grid-area: main;
             display: grid;
             grid-template-columns: 25% 25% 25% 25%;
-            grid-template-rows: 1fr 20em 20em 20em 20em 20em 20em 20em 20em;
+            grid-template-rows: 1fr 20em 20em 20em 20em 20em 20em 20em 20em 15em;
             grid-template-areas: "imagen imagen imagen imagen"
                                 "cliente1 cliente1 cliente1 cliente1"
                                 "cliente2 cliente2 cliente2 cliente2"
@@ -293,7 +293,8 @@ footer{
                                 "cliente5 cliente5 cliente5 cliente5"
                                 "cliente6 cliente6 cliente6 cliente6"
                                 "cliente7 cliente7 cliente7 cliente7"
-                                "cliente8 cliente8 cliente8 cliente8";
+                                "cliente8 cliente8 cliente8 cliente8"
+                                "nada nada nada nada";
             
         }
         
@@ -386,7 +387,7 @@ footer{
     #grillaCursos{
         display: grid;
         grid-template-columns: 25% 25% 25% 25%;
-        grid-template-rows: 9em 1fr 1fr 1fr 1fr 1fr 1fr 10%;
+        grid-template-rows: 5% 1fr 1fr 1fr 1fr 1fr 1fr 10%;
         grid-template-areas: "header header header header"
                              "main main main main"
                              "main main main main"
