@@ -131,7 +131,12 @@ footer {
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
     grid-template-rows: 10% 1fr 1fr 1fr 1fr 10%;
-    grid-template-areas: "navbar navbar navbar navbar" "main main main main" "main main main main" "main main main main" "main main main main" "footer footer footer footer"; }
+    grid-template-areas: "navbar navbar navbar navbar"
+ "main main main main"
+ "main main main main"
+ "main main main main"
+ "main main main main"
+ "footer footer footer footer"; }
     #grillaIndex .navbar {
       grid-area: navbar; }
     #grillaIndex footer {
@@ -141,7 +146,10 @@ footer {
       display: grid;
       grid-template-columns: 25% 25% 25% 25%;
       grid-template-rows: 20% 5% 30em 30em;
-      grid-template-areas: "video video presentacion presentacion" "titulo titulo titulo titulo" "cliente1 cliente2 cliente3 cliente4" "cliente5 cliente6 cliente7 cliente8";
+      grid-template-areas: "video video presentacion presentacion"
+ "titulo titulo titulo titulo"
+ "cliente1 cliente2 cliente3 cliente4"
+ "cliente5 cliente6 cliente7 cliente8";
       justify-items: center;
       align-items: center;
       text-align: center; }
@@ -172,7 +180,17 @@ footer {
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
     grid-template-rows: 10em 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 10%;
-    grid-template-areas: "header header header header" "main main main main" "main main main main" "main main main main" "main main main main" "main main main main" "main main main main" "main main main main" "main main main main" "main main main main" "footer footer footer footer"; }
+    grid-template-areas: "header header header header"
+ "main main main main"
+ "main main main main"
+ "main main main main"
+ "main main main main"
+ "main main main main"
+ "main main main main"
+ "main main main main"
+ "main main main main"
+ "main main main main"
+ "footer footer footer footer"; }
     #grillaClientes .navbar {
       grid-area: header; }
     #grillaClientes footer {
@@ -182,7 +200,15 @@ footer {
       display: grid;
       grid-template-columns: 25% 25% 25% 25%;
       grid-template-rows: 1fr 20em 20em 20em 20em 20em 20em 20em 20em;
-      grid-template-areas: "imagen imagen imagen imagen" "cliente1 cliente1 cliente1 cliente1" "cliente2 cliente2 cliente2 cliente2" "cliente3 cliente3 cliente3 cliente3" "cliente4 cliente4 cliente4 cliente4" "cliente5 cliente5 cliente5 cliente5" "cliente6 cliente6 cliente6 cliente6" "cliente7 cliente7 cliente7 cliente7" "cliente8 cliente8 cliente8 cliente8"; }
+      grid-template-areas: "imagen imagen imagen imagen"
+ "cliente1 cliente1 cliente1 cliente1"
+ "cliente2 cliente2 cliente2 cliente2"
+ "cliente3 cliente3 cliente3 cliente3"
+ "cliente4 cliente4 cliente4 cliente4"
+ "cliente5 cliente5 cliente5 cliente5"
+ "cliente6 cliente6 cliente6 cliente6"
+ "cliente7 cliente7 cliente7 cliente7"
+ "cliente8 cliente8 cliente8 cliente8"; }
     #grillaClientes .imagenPresentacion {
       grid-area: imagen;
       position: relative;
@@ -314,7 +340,14 @@ footer {
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
     grid-template-rows: 10% 1fr 1fr 1fr 1fr 1fr 1fr 10%;
-    grid-template-areas: "header header header header" "main main main main" "main main main main" "main main main main" "main main main main" "main main main main" "main main main main" "footer footer footer footer"; }
+    grid-template-areas: "header header header header"
+ "main main main main"
+ "main main main main"
+ "main main main main"
+ "main main main main"
+ "main main main main"
+ "main main main main"
+ "footer footer footer footer"; }
     #grillaCursos .navbar {
       grid-area: header; }
     #grillaCursos footer {
@@ -324,7 +357,12 @@ footer {
       display: grid;
       grid-template-columns: 25% 25% 25% 25%;
       grid-template-rows: 30em 4em 80em 40em 1fr 10em;
-      grid-template-areas: "imagen imagen imagen imagen" "titulo titulo titulo titulo" "explicacion explicacion explicacion explicacion" "videoE videoE videoE videoE" "Felici Felici Felici Felici" "boton boton boton boton";
+      grid-template-areas: "imagen imagen imagen imagen"
+ "titulo titulo titulo titulo"
+ "explicacion explicacion explicacion explicacion"
+ "videoE videoE videoE videoE"
+ "Felici Felici Felici Felici"
+ "boton boton boton boton";
       justify-items: center;
       align-items: center;
       text-align: center; }
