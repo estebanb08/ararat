@@ -349,3 +349,45 @@ footer {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap; } }
+
+@media only screen and (max-width: 600px) {
+  footer .listadoIzq {
+    display: flex; }
+  #grillaIndex {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 2% 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "header" "main" "main" "main" "main" "main" "main" "main" "main" "main" "main" "main" "footer"; }
+    #grillaIndex .navbar {
+      grid-area: header; }
+    #grillaIndex footer {
+      grid-area: footer; }
+    #grillaIndex #grillaIndexM {
+      grid-area: main;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 2% 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-areas: "video" "texto" "titulo" "clientes1" "clientes2" "clientes3" "clientes4" "clientes5" "clientes6" "clientes7" "clientes8";
+      justify-items: center;
+      align-items: center;
+      text-align: center; }
+      #grillaIndex #grillaIndexM .videoInicio {
+        grid-area: video; }
+      #grillaIndex #grillaIndexM .textoInicio {
+        grid-area: texto; }
+      #grillaIndex #grillaIndexM .cliente1 {
+        grid-area: clientes1; }
+      #grillaIndex #grillaIndexM .cliente2 {
+        grid-area: clientes2; }
+      #grillaIndex #grillaIndexM .cliente3 {
+        grid-area: clientes3; }
+      #grillaIndex #grillaIndexM .cliente4 {
+        grid-area: clientes4; }
+      #grillaIndex #grillaIndexM .cliente5 {
+        grid-area: clientes5; }
+      #grillaIndex #grillaIndexM .cliente6 {
+        grid-area: clientes6; }
+      #grillaIndex #grillaIndexM .cliente7 {
+        grid-area: clientes7; }
+      #grillaIndex #grillaIndexM .cliente8 {
+        grid-area: clientes8; } }
