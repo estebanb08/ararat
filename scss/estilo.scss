@@ -16,6 +16,7 @@
 
     &:hover{
         transform: scale(1.15,1.15);
+      
     }
 }
 @mixin agrandaElemento-min {
@@ -26,8 +27,25 @@
     }
 }
 
+@mixin bordes{
+    border: solid rgb(211, 211, 211) 1px;
+    border-bottom: solid rgb(182, 182, 182) 2px;
+    border-radius: 8px;
+
+    &:hover{
+        border: solid rgb(168, 168, 168) 0.5px;
+        box-shadow: 0px 1px 5px 5px rgb(194, 191, 191);
+    }
+}
+
+@mixin divClientes {
+    background-color: white;
+
+}
+
 body{
     height: 100%;
+    background-color: rgb(233, 227, 227);
 }
 .navbar{
     width: 100%;
@@ -109,14 +127,13 @@ footer{
     @include tamaños(100%, 100%);
 }
 
-
-
 #grillaIndexM{
 
     div{
+        @include divClientes();
         @include agrandaElemento();
-        border: solid rgb(211, 211, 211) 1px;
-        border-bottom: solid rgb(182, 182, 182) 2px;
+        @include bordes();
+        
         @include tamaños(80%, 70%);
         @include posicionamiento-items();
         
@@ -179,8 +196,17 @@ footer{
     } 
 }
 
+.irAlFormulario{
+    a{
+        text-decoration: none;
+        color: black;
+    }
+}
 
 
+a:hover{
+    color: rgb(71, 68, 68);
+}
 
 @media only screen and (min-width:600px){
 
@@ -449,6 +475,9 @@ footer{
                 display: flex;
                 flex-direction: column;
                 flex-wrap: wrap;
+                a{
+                    color: black;
+                }
             }
         }
     }
@@ -511,6 +540,10 @@ footer{
     }
 }
 
+@mixin tamañosC{
+    @include tamaños(80%, 90%);
+}
+
     #grillaIndex{
         display: grid;
         grid-template-columns: 100%;
@@ -557,12 +590,16 @@ footer{
             
             .videoInicio{
                 grid-area: video;
+                @include tamaños(80%, 80%)
             }
 
             .textoInicio{
                 grid-area: texto;
             }
 
+            div{
+                @include tamañosC();
+            }
             .cliente1{
                 grid-area: clientes1;
             }
@@ -648,8 +685,7 @@ footer{
             }
 
             @mixin configuracionClientes{
-                border: solid rgb(211, 211, 211) 1px;
-                border-bottom: solid rgb(163, 163, 163) 2px;
+                @include bordes();
                 img{
                     @include tamaños(100%, 50%);
                     padding: 2em;
@@ -657,6 +693,12 @@ footer{
                 p{
                     font-size: 3vw;
                 }
+            }
+
+            div{
+                @include tamañosC();
+                position: relative;
+                left: 3em;
             }
 
             .cliente-Clientes1{
@@ -723,7 +765,7 @@ footer{
             grid-area: main;
             display: grid;
             grid-template-columns: 100%;
-            grid-template-rows: 30em 10em 1fr 40em 50em 1fr;
+            grid-template-rows: 30em 10em 1fr 50em 15em 10em;
             grid-template-areas:"imagen"
                                 "titulo"
                                 "parrafo"
@@ -744,9 +786,9 @@ footer{
                 grid-area: parrafo;
             }
 
-            .video-Imagenes-Parrafo{
+            video{
                 grid-area: video-imagenes-parrafos;
-                @include tamaños(100%, 100%);
+                @include tamaños(80%, 80%);
             }
 
             .finalizacion{

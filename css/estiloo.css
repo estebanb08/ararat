@@ -1,5 +1,6 @@
 body {
-  height: 100%; }
+  height: 100%;
+  background-color: #e9e3e3; }
 
 .navbar {
   width: 100%;
@@ -55,9 +56,11 @@ footer {
   height: 100%; }
 
 #grillaIndexM div {
+  background-color: white;
   transition: all .3s;
   border: solid lightgray 1px;
   border-bottom: solid #b6b6b6 2px;
+  border-radius: 8px;
   width: 80%;
   height: 70%;
   justify-items: center;
@@ -65,6 +68,9 @@ footer {
   text-align: center; }
   #grillaIndexM div:hover {
     transform: scale(1.15, 1.15); }
+  #grillaIndexM div:hover {
+    border: solid #a8a8a8 0.5px;
+    box-shadow: 0px 1px 5px 5px #c2bfbf; }
   #grillaIndexM div img {
     width: 90%;
     height: 30%;
@@ -125,6 +131,13 @@ footer {
   background-color: #c7c9ca; }
   #grillaClientes #grillaClientesM .cliente-Clientes8:hover {
     transform: scale(1.01, 1.01); }
+
+.irAlFormulario a {
+  text-decoration: none;
+  color: black; }
+
+a:hover {
+  color: #474444; }
 
 @media only screen and (min-width: 600px) {
   #grillaIndex {
@@ -349,7 +362,9 @@ footer {
         grid-area: boton;
         display: flex;
         flex-direction: column;
-        flex-wrap: wrap; } }
+        flex-wrap: wrap; }
+        #grillaCursos #grillaCursosM .irAlFormulario a {
+          color: black; } }
 
 @media only screen and (max-width: 600px) {
   footer {
@@ -407,9 +422,14 @@ footer {
       align-items: center;
       text-align: center; }
       #grillaIndex #grillaIndexM .videoInicio {
-        grid-area: video; }
+        grid-area: video;
+        width: 80%;
+        height: 80%; }
       #grillaIndex #grillaIndexM .textoInicio {
         grid-area: texto; }
+      #grillaIndex #grillaIndexM div {
+        width: 80%;
+        height: 90%; }
       #grillaIndex #grillaIndexM .cliente1 {
         grid-area: clientes1; }
       #grillaIndex #grillaIndexM .cliente2 {
@@ -454,10 +474,19 @@ footer {
           bottom: 4em;
           color: white;
           font-family: 'Secular One', sans-serif; }
+      #grillaClientes #grillaClientesM div {
+        width: 80%;
+        height: 90%;
+        position: relative;
+        left: 3em; }
       #grillaClientes #grillaClientesM .cliente-Clientes1 {
         grid-area: clientes1;
         border: solid lightgray 1px;
-        border-bottom: solid #a3a3a3 2px; }
+        border-bottom: solid #b6b6b6 2px;
+        border-radius: 8px; }
+        #grillaClientes #grillaClientesM .cliente-Clientes1:hover {
+          border: solid #a8a8a8 0.5px;
+          box-shadow: 0px 1px 5px 5px #c2bfbf; }
         #grillaClientes #grillaClientesM .cliente-Clientes1 img {
           width: 100%;
           height: 50%;
@@ -467,7 +496,11 @@ footer {
       #grillaClientes #grillaClientesM .cliente-Clientes2 {
         grid-area: clientes2;
         border: solid lightgray 1px;
-        border-bottom: solid #a3a3a3 2px; }
+        border-bottom: solid #b6b6b6 2px;
+        border-radius: 8px; }
+        #grillaClientes #grillaClientesM .cliente-Clientes2:hover {
+          border: solid #a8a8a8 0.5px;
+          box-shadow: 0px 1px 5px 5px #c2bfbf; }
         #grillaClientes #grillaClientesM .cliente-Clientes2 img {
           width: 100%;
           height: 50%;
@@ -477,7 +510,11 @@ footer {
       #grillaClientes #grillaClientesM .cliente-Clientes3 {
         grid-area: clientes3;
         border: solid lightgray 1px;
-        border-bottom: solid #a3a3a3 2px; }
+        border-bottom: solid #b6b6b6 2px;
+        border-radius: 8px; }
+        #grillaClientes #grillaClientesM .cliente-Clientes3:hover {
+          border: solid #a8a8a8 0.5px;
+          box-shadow: 0px 1px 5px 5px #c2bfbf; }
         #grillaClientes #grillaClientesM .cliente-Clientes3 img {
           width: 100%;
           height: 50%;
@@ -487,7 +524,11 @@ footer {
       #grillaClientes #grillaClientesM .cliente-Clientes4 {
         grid-area: clientes4;
         border: solid lightgray 1px;
-        border-bottom: solid #a3a3a3 2px; }
+        border-bottom: solid #b6b6b6 2px;
+        border-radius: 8px; }
+        #grillaClientes #grillaClientesM .cliente-Clientes4:hover {
+          border: solid #a8a8a8 0.5px;
+          box-shadow: 0px 1px 5px 5px #c2bfbf; }
         #grillaClientes #grillaClientesM .cliente-Clientes4 img {
           width: 100%;
           height: 50%;
@@ -497,7 +538,11 @@ footer {
       #grillaClientes #grillaClientesM .cliente-Clientes5 {
         grid-area: clientes5;
         border: solid lightgray 1px;
-        border-bottom: solid #a3a3a3 2px; }
+        border-bottom: solid #b6b6b6 2px;
+        border-radius: 8px; }
+        #grillaClientes #grillaClientesM .cliente-Clientes5:hover {
+          border: solid #a8a8a8 0.5px;
+          box-shadow: 0px 1px 5px 5px #c2bfbf; }
         #grillaClientes #grillaClientesM .cliente-Clientes5 img {
           width: 100%;
           height: 50%;
@@ -507,7 +552,11 @@ footer {
       #grillaClientes #grillaClientesM .cliente-Clientes6 {
         grid-area: clientes6;
         border: solid lightgray 1px;
-        border-bottom: solid #a3a3a3 2px; }
+        border-bottom: solid #b6b6b6 2px;
+        border-radius: 8px; }
+        #grillaClientes #grillaClientesM .cliente-Clientes6:hover {
+          border: solid #a8a8a8 0.5px;
+          box-shadow: 0px 1px 5px 5px #c2bfbf; }
         #grillaClientes #grillaClientesM .cliente-Clientes6 img {
           width: 100%;
           height: 50%;
@@ -517,7 +566,11 @@ footer {
       #grillaClientes #grillaClientesM .cliente-Clientes7 {
         grid-area: clientes7;
         border: solid lightgray 1px;
-        border-bottom: solid #a3a3a3 2px; }
+        border-bottom: solid #b6b6b6 2px;
+        border-radius: 8px; }
+        #grillaClientes #grillaClientesM .cliente-Clientes7:hover {
+          border: solid #a8a8a8 0.5px;
+          box-shadow: 0px 1px 5px 5px #c2bfbf; }
         #grillaClientes #grillaClientesM .cliente-Clientes7 img {
           width: 100%;
           height: 50%;
@@ -527,8 +580,12 @@ footer {
       #grillaClientes #grillaClientesM .cliente-Clientes8 {
         grid-area: clientes8;
         border: solid lightgray 1px;
-        border-bottom: solid #a3a3a3 2px;
+        border-bottom: solid #b6b6b6 2px;
+        border-radius: 8px;
         margin-bottom: 5em; }
+        #grillaClientes #grillaClientesM .cliente-Clientes8:hover {
+          border: solid #a8a8a8 0.5px;
+          box-shadow: 0px 1px 5px 5px #c2bfbf; }
         #grillaClientes #grillaClientesM .cliente-Clientes8 img {
           width: 100%;
           height: 50%;
@@ -548,7 +605,7 @@ footer {
       grid-area: main;
       display: grid;
       grid-template-columns: 100%;
-      grid-template-rows: 30em 10em 1fr 40em 50em 1fr;
+      grid-template-rows: 30em 10em 1fr 50em 15em 10em;
       grid-template-areas: "imagen" "titulo" "parrafo" "video-imagenes-parrafos" "finalizacion" "formulario";
       justify-items: center;
       align-items: center;
@@ -559,10 +616,10 @@ footer {
         grid-area: titulo; }
       #grillaCursos #grillaCursosM .parrafo {
         grid-area: parrafo; }
-      #grillaCursos #grillaCursosM .video-Imagenes-Parrafo {
+      #grillaCursos #grillaCursosM video {
         grid-area: video-imagenes-parrafos;
-        width: 100%;
-        height: 100%; }
+        width: 80%;
+        height: 80%; }
       #grillaCursos #grillaCursosM .finalizacion {
         grid-area: finalizacion; }
       #grillaCursos #grillaCursosM .irAlFormulario {
