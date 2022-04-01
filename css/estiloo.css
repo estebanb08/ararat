@@ -80,49 +80,49 @@ footer {
 
 #grillaClientes #grillaClientesM .cliente-Clientes1 {
   transition: all .3s;
-  background-color: #63beda; }
+  background-color: #c7c9ca; }
   #grillaClientes #grillaClientesM .cliente-Clientes1:hover {
     transform: scale(1.01, 1.01); }
 
 #grillaClientes #grillaClientesM .cliente-Clientes2 {
   transition: all .3s;
-  background-color: #63beda; }
+  background-color: #c7c9ca; }
   #grillaClientes #grillaClientesM .cliente-Clientes2:hover {
     transform: scale(1.01, 1.01); }
 
 #grillaClientes #grillaClientesM .cliente-Clientes3 {
   transition: all .3s;
-  background-color: #63beda; }
+  background-color: #c7c9ca; }
   #grillaClientes #grillaClientesM .cliente-Clientes3:hover {
     transform: scale(1.01, 1.01); }
 
 #grillaClientes #grillaClientesM .cliente-Clientes4 {
   transition: all .3s;
-  background-color: #63beda; }
+  background-color: #c7c9ca; }
   #grillaClientes #grillaClientesM .cliente-Clientes4:hover {
     transform: scale(1.01, 1.01); }
 
 #grillaClientes #grillaClientesM .cliente-Clientes5 {
   transition: all .3s;
-  background-color: #63beda; }
+  background-color: #c7c9ca; }
   #grillaClientes #grillaClientesM .cliente-Clientes5:hover {
     transform: scale(1.01, 1.01); }
 
 #grillaClientes #grillaClientesM .cliente-Clientes6 {
   transition: all .3s;
-  background-color: #63beda; }
+  background-color: #c7c9ca; }
   #grillaClientes #grillaClientesM .cliente-Clientes6:hover {
     transform: scale(1.01, 1.01); }
 
 #grillaClientes #grillaClientesM .cliente-Clientes7 {
   transition: all .3s;
-  background-color: #63beda; }
+  background-color: #c7c9ca; }
   #grillaClientes #grillaClientesM .cliente-Clientes7:hover {
     transform: scale(1.01, 1.01); }
 
 #grillaClientes #grillaClientesM .cliente-Clientes8 {
   transition: all .3s;
-  background-color: #63beda; }
+  background-color: #c7c9ca; }
   #grillaClientes #grillaClientesM .cliente-Clientes8:hover {
     transform: scale(1.01, 1.01); }
 
@@ -193,6 +193,7 @@ footer {
         filter: blur(0px);
         transition: all 1s; }
       #grillaClientes .imagenPresentacion h1 {
+        width: auto;
         position: relative;
         color: white;
         bottom: 10em;
@@ -351,12 +352,46 @@ footer {
         flex-wrap: wrap; } }
 
 @media only screen and (max-width: 600px) {
-  footer .listadoIzq {
-    display: flex; }
+  footer {
+    background-color: #247f9b;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "listaContacto" "listaNav"; }
+    footer .listadoIzq {
+      grid-area: listaContacto;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap; }
+      footer .listadoIzq li {
+        display: flex;
+        flex-direction: row;
+        padding: .5em; }
+        footer .listadoIzq li img {
+          width: 25%;
+          height: 85%; }
+        footer .listadoIzq li svg {
+          position: relative;
+          right: .5em;
+          top: .2em; }
+    footer .listadoNav {
+      grid-area: listaNav;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap; }
+      footer .listadoNav li {
+        padding: 3%; }
+      footer .listadoNav a {
+        text-decoration: none;
+        color: black; }
   #grillaIndex {
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 2% 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas: "header" "main" "main" "main" "main" "main" "main" "main" "main" "main" "main" "main" "footer"; }
     #grillaIndex .navbar {
       grid-area: header; }
@@ -390,4 +425,145 @@ footer {
       #grillaIndex #grillaIndexM .cliente7 {
         grid-area: clientes7; }
       #grillaIndex #grillaIndexM .cliente8 {
-        grid-area: clientes8; } }
+        grid-area: clientes8; }
+  #grillaClientes {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "navbar" "main" "main" "main" "main" "main" "main" "main" "main" "main" "footer";
+    justify-items: center;
+    align-items: center;
+    text-align: center; }
+    #grillaClientes .navbar {
+      grid-area: navbar; }
+    #grillaClientes footer {
+      grid-area: footer; }
+    #grillaClientes #grillaClientesM {
+      grid-area: main;
+      display: grid;
+      row-gap: 2em;
+      grid-template-columns: 100%;
+      grid-template-rows: 1fr 30em 30em 30em 30em 30em 30em 30em 30em;
+      grid-template-areas: "videoYtexto" "clientes1" "clientes2" "clientes3" "clientes4" "clientes5" "clientes6" "clientes7" "clientes8"; }
+      #grillaClientes #grillaClientesM .imagenPresentacion {
+        grid-area: videoYtexto; }
+        #grillaClientes #grillaClientesM .imagenPresentacion img {
+          filter: blur(2px); }
+        #grillaClientes #grillaClientesM .imagenPresentacion h1 {
+          position: relative;
+          bottom: 4em;
+          color: white;
+          font-family: 'Secular One', sans-serif; }
+      #grillaClientes #grillaClientesM .cliente-Clientes1 {
+        grid-area: clientes1;
+        border: solid lightgray 1px;
+        border-bottom: solid #a3a3a3 2px; }
+        #grillaClientes #grillaClientesM .cliente-Clientes1 img {
+          width: 100%;
+          height: 50%;
+          padding: 2em; }
+        #grillaClientes #grillaClientesM .cliente-Clientes1 p {
+          font-size: 3vw; }
+      #grillaClientes #grillaClientesM .cliente-Clientes2 {
+        grid-area: clientes2;
+        border: solid lightgray 1px;
+        border-bottom: solid #a3a3a3 2px; }
+        #grillaClientes #grillaClientesM .cliente-Clientes2 img {
+          width: 100%;
+          height: 50%;
+          padding: 2em; }
+        #grillaClientes #grillaClientesM .cliente-Clientes2 p {
+          font-size: 3vw; }
+      #grillaClientes #grillaClientesM .cliente-Clientes3 {
+        grid-area: clientes3;
+        border: solid lightgray 1px;
+        border-bottom: solid #a3a3a3 2px; }
+        #grillaClientes #grillaClientesM .cliente-Clientes3 img {
+          width: 100%;
+          height: 50%;
+          padding: 2em; }
+        #grillaClientes #grillaClientesM .cliente-Clientes3 p {
+          font-size: 3vw; }
+      #grillaClientes #grillaClientesM .cliente-Clientes4 {
+        grid-area: clientes4;
+        border: solid lightgray 1px;
+        border-bottom: solid #a3a3a3 2px; }
+        #grillaClientes #grillaClientesM .cliente-Clientes4 img {
+          width: 100%;
+          height: 50%;
+          padding: 2em; }
+        #grillaClientes #grillaClientesM .cliente-Clientes4 p {
+          font-size: 3vw; }
+      #grillaClientes #grillaClientesM .cliente-Clientes5 {
+        grid-area: clientes5;
+        border: solid lightgray 1px;
+        border-bottom: solid #a3a3a3 2px; }
+        #grillaClientes #grillaClientesM .cliente-Clientes5 img {
+          width: 100%;
+          height: 50%;
+          padding: 2em; }
+        #grillaClientes #grillaClientesM .cliente-Clientes5 p {
+          font-size: 3vw; }
+      #grillaClientes #grillaClientesM .cliente-Clientes6 {
+        grid-area: clientes6;
+        border: solid lightgray 1px;
+        border-bottom: solid #a3a3a3 2px; }
+        #grillaClientes #grillaClientesM .cliente-Clientes6 img {
+          width: 100%;
+          height: 50%;
+          padding: 2em; }
+        #grillaClientes #grillaClientesM .cliente-Clientes6 p {
+          font-size: 3vw; }
+      #grillaClientes #grillaClientesM .cliente-Clientes7 {
+        grid-area: clientes7;
+        border: solid lightgray 1px;
+        border-bottom: solid #a3a3a3 2px; }
+        #grillaClientes #grillaClientesM .cliente-Clientes7 img {
+          width: 100%;
+          height: 50%;
+          padding: 2em; }
+        #grillaClientes #grillaClientesM .cliente-Clientes7 p {
+          font-size: 3vw; }
+      #grillaClientes #grillaClientesM .cliente-Clientes8 {
+        grid-area: clientes8;
+        border: solid lightgray 1px;
+        border-bottom: solid #a3a3a3 2px;
+        margin-bottom: 5em; }
+        #grillaClientes #grillaClientesM .cliente-Clientes8 img {
+          width: 100%;
+          height: 50%;
+          padding: 2em; }
+        #grillaClientes #grillaClientesM .cliente-Clientes8 p {
+          font-size: 3vw; }
+  #grillaCursos {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "navbar" "main" "main" "main" "main" "main" "main" "main" "footer"; }
+    #grillaCursos .navbar {
+      grid-area: navbar; }
+    #grillaCursos footer {
+      grid-area: footer; }
+    #grillaCursos #grillaCursosM {
+      grid-area: main;
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-rows: 30em 10em 1fr 40em 50em 1fr;
+      grid-template-areas: "imagen" "titulo" "parrafo" "video-imagenes-parrafos" "finalizacion" "formulario";
+      justify-items: center;
+      align-items: center;
+      text-align: center; }
+      #grillaCursos #grillaCursosM .imagenCurso {
+        grid-area: imagen; }
+      #grillaCursos #grillaCursosM .titulo {
+        grid-area: titulo; }
+      #grillaCursos #grillaCursosM .parrafo {
+        grid-area: parrafo; }
+      #grillaCursos #grillaCursosM .video-Imagenes-Parrafo {
+        grid-area: video-imagenes-parrafos;
+        width: 100%;
+        height: 100%; }
+      #grillaCursos #grillaCursosM .finalizacion {
+        grid-area: finalizacion; }
+      #grillaCursos #grillaCursosM .irAlFormulario {
+        grid-area: formulario; } }

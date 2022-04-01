@@ -311,6 +311,7 @@ footer{
             }
 
             h1{
+                width: auto;
                 position: relative;
                 color: rgb(255, 255, 255);
                 bottom: 10em;
@@ -455,17 +456,65 @@ footer{
 
 @media only screen and (max-width:600px){
 
-    // footer
+   // footer
     footer{
-        .listadoIzq{
+        background-color: rgb(36, 127, 155);
+        @include tamaños(100%, 100%);
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "listaContacto"
+                             "listaNav";
+
+
+    .listadoIzq{ 
+        grid-area: listaContacto;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+
+        li{
             display: flex;
+            flex-direction: row;
+            padding: .5em;
+
+            img{
+                @include tamaños(25%, 85%);
+            }
+
+            svg{
+                position: relative;
+                right: .5em;
+                top: .2em;    
+            }
         }
     }
+
+    .listadoNav{
+        grid-area: listaNav;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+
+
+        li{
+            padding: 3%;
+        }
+        a{
+            text-decoration: none; 
+            color: black;
+        }
+        
+
+    }
+}
 
     #grillaIndex{
         display: grid;
         grid-template-columns: 100%;
-        grid-template-rows: 2% 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
         grid-template-areas: "header"
                              "main"
                              "main"
@@ -543,6 +592,170 @@ footer{
         }
     }
 
+    #grillaClientes{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: "navbar"
+                             "main"
+                             "main"
+                             "main"
+                             "main"
+                             "main"
+                             "main"
+                             "main"
+                             "main"
+                             "main"
+                             "footer";
+        @include posicionamiento-items();                     
+        .navbar{
+            grid-area: navbar;
+        }
+
+        footer{
+            grid-area: footer;
+        }
+
+        #grillaClientesM{
+            grid-area: main;
+            display: grid;
+            row-gap: 2em;
+            grid-template-columns: 100%;
+            grid-template-rows: 1fr 30em 30em 30em 30em 30em 30em 30em 30em;
+            grid-template-areas: "videoYtexto"
+                                "clientes1"
+                                "clientes2"
+                                "clientes3"
+                                "clientes4"
+                                "clientes5"
+                                "clientes6"
+                                "clientes7"
+                                "clientes8";
+            // @include posicionamiento-items();
+            
+            .imagenPresentacion{
+                grid-area: videoYtexto;
+                img{
+                    filter: blur(2px);
+                }
+
+                h1{
+                    position: relative;
+                    bottom: 4em;
+                    color: white;
+                    font-family: 'Secular One', sans-serif;
+                }
+            }
+
+            @mixin configuracionClientes{
+                border: solid rgb(211, 211, 211) 1px;
+                border-bottom: solid rgb(163, 163, 163) 2px;
+                img{
+                    @include tamaños(100%, 50%);
+                    padding: 2em;
+                }
+                p{
+                    font-size: 3vw;
+                }
+            }
+
+            .cliente-Clientes1{
+                grid-area: clientes1;
+                @include configuracionClientes();
+            }
+            .cliente-Clientes2{
+                grid-area: clientes2;
+                @include configuracionClientes();
+            }
+            .cliente-Clientes3{
+                grid-area: clientes3;
+                @include configuracionClientes();
+            }
+            .cliente-Clientes4{
+                grid-area: clientes4;
+                @include configuracionClientes();
+            }
+            .cliente-Clientes5{
+                grid-area: clientes5;
+                @include configuracionClientes();
+            }
+            .cliente-Clientes6{
+                grid-area: clientes6;
+                @include configuracionClientes();
+            }
+            .cliente-Clientes7{
+                grid-area: clientes7;
+                @include configuracionClientes();
+            }
+            .cliente-Clientes8{
+                grid-area: clientes8;
+                @include configuracionClientes();
+                margin-bottom: 5em;
+            }
+        }
+    }
 
 
+    #grillaCursos{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: "navbar"
+                             "main"
+                             "main"
+                             "main"
+                             "main"
+                             "main"
+                             "main"
+                             "main"
+                             "footer";
+        
+        .navbar{
+            grid-area: navbar;
+        }
+
+        footer{
+            grid-area: footer;
+        }
+        
+
+        #grillaCursosM{
+            grid-area: main;
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-rows: 30em 10em 1fr 40em 50em 1fr;
+            grid-template-areas:"imagen"
+                                "titulo"
+                                "parrafo"
+                                "video-imagenes-parrafos"
+                                "finalizacion"
+                                "formulario";
+            @include posicionamiento-items();
+
+            .imagenCurso{
+                grid-area: imagen;
+            }
+
+            .titulo{
+                grid-area: titulo;
+            }
+
+            .parrafo{
+                grid-area: parrafo;
+            }
+
+            .video-Imagenes-Parrafo{
+                grid-area: video-imagenes-parrafos;
+                @include tamaños(100%, 100%);
+            }
+
+            .finalizacion{
+                grid-area: finalizacion;
+            }
+
+            .irAlFormulario{
+                grid-area: formulario;
+            }
+        }
+    }
 }
