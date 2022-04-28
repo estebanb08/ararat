@@ -49,6 +49,7 @@ body{
 }
 .navbar{
     width: 100%;
+    height: 6.8em;
     margin-bottom: 5%;
     align-items: flex-start;
     
@@ -215,7 +216,7 @@ a:hover{
     #grillaIndex{
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: 6% 1fr 1fr 1fr 1fr 10%;
+    grid-template-rows: auto 1fr 1fr 1fr 1fr 10%;
     grid-template-areas: "navbar navbar navbar navbar"
                          "main main main main"
                          "main main main main"
@@ -234,7 +235,7 @@ a:hover{
         grid-area: main;
         display: grid;
         grid-template-columns: 25% 25% 25% 25%;
-        grid-template-rows: 20% 5% 30em 30em;
+        grid-template-rows: 20% 5% 40em 40em;
         grid-template-areas:"video video presentacion presentacion"
                             "titulo titulo titulo titulo"
                             "cliente1 cliente2 cliente3 cliente4"
@@ -286,7 +287,7 @@ a:hover{
     #grillaClientes{
         display: grid;
         grid-template-columns: 25% 25% 25% 25%;
-        grid-template-rows: 4% 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 10%;
+        grid-template-rows: auto 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 10%;
         grid-template-areas: "header header header header"
                             "main main main main"
                             "main main main main"
@@ -341,7 +342,7 @@ a:hover{
                 position: relative;
                 color: rgb(255, 255, 255);
                 bottom: 10em;
-                left: 9.1em;
+                left: 15em;
                 font-family: 'Secular One', sans-serif;
             }
         }
@@ -385,26 +386,32 @@ a:hover{
         .cliente-Clientes3{
             grid-area: cliente3;
             @include clientesArea();
+            @include bordes();
         }
         .cliente-Clientes4{
             grid-area: cliente4;
             @include clientesArea2();
+            @include bordes();
         }
         .cliente-Clientes5{
             grid-area: cliente5;
             @include clientesArea();
+            @include bordes();
         }
         .cliente-Clientes6{
             grid-area: cliente6;
             @include clientesArea2();
+            @include bordes();
         }
         .cliente-Clientes7{
             grid-area: cliente7;
             @include clientesArea();
+            @include bordes();
         }
         .cliente-Clientes8{
             grid-area: cliente8;
             @include clientesArea2();
+            @include bordes();
         }
 
     }

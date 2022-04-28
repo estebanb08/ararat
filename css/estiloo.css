@@ -4,6 +4,7 @@ body {
 
 .navbar {
   width: 100%;
+  height: 6.8em;
   margin-bottom: 5%;
   align-items: flex-start; }
   .navbar img {
@@ -143,7 +144,7 @@ a:hover {
   #grillaIndex {
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: 6% 1fr 1fr 1fr 1fr 10%;
+    grid-template-rows: auto 1fr 1fr 1fr 1fr 10%;
     grid-template-areas: "navbar navbar navbar navbar" "main main main main" "main main main main" "main main main main" "main main main main" "footer footer footer footer"; }
     #grillaIndex .navbar {
       grid-area: navbar; }
@@ -153,7 +154,7 @@ a:hover {
       grid-area: main;
       display: grid;
       grid-template-columns: 25% 25% 25% 25%;
-      grid-template-rows: 20% 5% 30em 30em;
+      grid-template-rows: 20% 5% 40em 40em;
       grid-template-areas: "video video presentacion presentacion" "titulo titulo titulo titulo" "cliente1 cliente2 cliente3 cliente4" "cliente5 cliente6 cliente7 cliente8";
       justify-items: center;
       align-items: center;
@@ -184,7 +185,7 @@ a:hover {
   #grillaClientes {
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: 4% 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 10%;
+    grid-template-rows: auto 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 10%;
     grid-template-areas: "header header header header" "main main main main" "main main main main" "main main main main" "main main main main" "main main main main" "main main main main" "main main main main" "main main main main" "main main main main" "footer footer footer footer"; }
     #grillaClientes .navbar {
       grid-area: header; }
@@ -210,7 +211,7 @@ a:hover {
         position: relative;
         color: white;
         bottom: 10em;
-        left: 9.1em;
+        left: 15em;
         font-family: 'Secular One', sans-serif; }
     #grillaClientes .cliente-Clientes1 {
       grid-area: cliente1;
@@ -249,11 +250,17 @@ a:hover {
       margin: 0 3em 3em 7em;
       justify-items: center;
       align-items: center;
-      text-align: center; }
+      text-align: center;
+      border: solid lightgray 1px;
+      border-bottom: solid #b6b6b6 2px;
+      border-radius: 8px; }
       #grillaClientes .cliente-Clientes3 img {
         grid-area: imagen; }
       #grillaClientes .cliente-Clientes3 p {
         grid-area: texto; }
+      #grillaClientes .cliente-Clientes3:hover {
+        border: solid #a8a8a8 0.5px;
+        box-shadow: 0px 1px 5px 5px #c2bfbf; }
     #grillaClientes .cliente-Clientes4 {
       grid-area: cliente4;
       display: grid;
@@ -263,11 +270,17 @@ a:hover {
       margin: 0 7em 3em 3em;
       justify-items: center;
       align-items: center;
-      text-align: center; }
+      text-align: center;
+      border: solid lightgray 1px;
+      border-bottom: solid #b6b6b6 2px;
+      border-radius: 8px; }
       #grillaClientes .cliente-Clientes4 img {
         grid-area: imagen; }
       #grillaClientes .cliente-Clientes4 p {
         grid-area: texto; }
+      #grillaClientes .cliente-Clientes4:hover {
+        border: solid #a8a8a8 0.5px;
+        box-shadow: 0px 1px 5px 5px #c2bfbf; }
     #grillaClientes .cliente-Clientes5 {
       grid-area: cliente5;
       display: grid;
@@ -277,11 +290,17 @@ a:hover {
       margin: 0 3em 3em 7em;
       justify-items: center;
       align-items: center;
-      text-align: center; }
+      text-align: center;
+      border: solid lightgray 1px;
+      border-bottom: solid #b6b6b6 2px;
+      border-radius: 8px; }
       #grillaClientes .cliente-Clientes5 img {
         grid-area: imagen; }
       #grillaClientes .cliente-Clientes5 p {
         grid-area: texto; }
+      #grillaClientes .cliente-Clientes5:hover {
+        border: solid #a8a8a8 0.5px;
+        box-shadow: 0px 1px 5px 5px #c2bfbf; }
     #grillaClientes .cliente-Clientes6 {
       grid-area: cliente6;
       display: grid;
@@ -291,11 +310,17 @@ a:hover {
       margin: 0 7em 3em 3em;
       justify-items: center;
       align-items: center;
-      text-align: center; }
+      text-align: center;
+      border: solid lightgray 1px;
+      border-bottom: solid #b6b6b6 2px;
+      border-radius: 8px; }
       #grillaClientes .cliente-Clientes6 img {
         grid-area: imagen; }
       #grillaClientes .cliente-Clientes6 p {
         grid-area: texto; }
+      #grillaClientes .cliente-Clientes6:hover {
+        border: solid #a8a8a8 0.5px;
+        box-shadow: 0px 1px 5px 5px #c2bfbf; }
     #grillaClientes .cliente-Clientes7 {
       grid-area: cliente7;
       display: grid;
@@ -305,11 +330,17 @@ a:hover {
       margin: 0 3em 3em 7em;
       justify-items: center;
       align-items: center;
-      text-align: center; }
+      text-align: center;
+      border: solid lightgray 1px;
+      border-bottom: solid #b6b6b6 2px;
+      border-radius: 8px; }
       #grillaClientes .cliente-Clientes7 img {
         grid-area: imagen; }
       #grillaClientes .cliente-Clientes7 p {
         grid-area: texto; }
+      #grillaClientes .cliente-Clientes7:hover {
+        border: solid #a8a8a8 0.5px;
+        box-shadow: 0px 1px 5px 5px #c2bfbf; }
     #grillaClientes .cliente-Clientes8 {
       grid-area: cliente8;
       display: grid;
@@ -319,11 +350,17 @@ a:hover {
       margin: 0 7em 3em 3em;
       justify-items: center;
       align-items: center;
-      text-align: center; }
+      text-align: center;
+      border: solid lightgray 1px;
+      border-bottom: solid #b6b6b6 2px;
+      border-radius: 8px; }
       #grillaClientes .cliente-Clientes8 img {
         grid-area: imagen; }
       #grillaClientes .cliente-Clientes8 p {
         grid-area: texto; }
+      #grillaClientes .cliente-Clientes8:hover {
+        border: solid #a8a8a8 0.5px;
+        box-shadow: 0px 1px 5px 5px #c2bfbf; }
   #grillaCursos {
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
