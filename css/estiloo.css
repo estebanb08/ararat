@@ -55,8 +55,17 @@ footer {
 .estoVaEnRojo {
   color: red; }
 
+b {
+  color: #c45f5f; }
+
 .sinEstiloUL {
   list-style: none; }
+
+p {
+  margin: 0; }
+
+.Introduccion ul li {
+  padding: 0.3em; }
 
 .videoInicio {
   width: 100%;
@@ -145,9 +154,6 @@ footer {
 
 a:hover {
   color: #474444; }
-
-.negrita {
-  font-style: bold; }
 
 @media only screen and (min-width: 600px) {
   #grillaIndex {
@@ -373,30 +379,43 @@ a:hover {
   #grillaCursos {
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: 5% 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 20em;
-    grid-template-areas: "header header header header" "main main main main" "main main main main" "main main main main" "main main main main" "main main main main" "main main main main" "main main main main" "main main main main" "main main main main" "main main main main" "main main main main" "main main main main" "main main main main" "main main main main" "main main main main" "main main main main" "main main main main" "main main main main" "footer footer footer footer"; }
+    grid-template-rows: 40em 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 20em;
+    grid-template-areas: "header header header header" "main main main main" "main main main main" "main main main main" "main main main main" "main main main main" "main main main main" "main main main main" "main main main main" "main main main main" "main main main main" "main main main main" "main main main main" "main main main main" "main main main main" "main main main main" "main main main main" "main main main main" "footer footer footer footer"; }
     #grillaCursos .navbar {
       grid-area: header; }
     #grillaCursos footer {
       grid-area: footer; }
     #grillaCursos #grillaCursosM {
       grid-area: main;
+      font-size: 1.2vw;
       display: grid;
-      grid-row: 1em;
       grid-template-columns: 25% 25% 25% 25%;
-      grid-template-rows: 55em 10em 30em 35em 28em 25em 30em 15em 25em 210em 30em 65em 30em 30em 20em 30em 10em 10em 30em;
-      grid-template-areas: "imagen imagen imagen imagen" "titulo titulo titulo titulo" "Introduccion Introduccion Introduccion Introduccion" "parrafo1 parrafo1 parrafo1 parrafo1" "parrafo2 parrafo2 parrafo2 parrafo2" "parrafo3 parrafo3 parrafo3 parrafo3" "parrafo4 parrafo4 parrafo4 parrafo4" "parrafo5 parrafo5 parrafo5 parrafo5" "parrafo6 parrafo6 parrafo6 parrafo6" "parrafo7 parrafo7 parrafo7 parrafo7" "parrafo8 parrafo8 parrafo8 parrafo8" "parrafo9 parrafo9 parrafo9 parrafo9" "parrafo10 parrafo10 parrafo10 parrafo10" "parrafo11 parrafo11 parrafo11 parrafo11" "parrafo12 parrafo12 parrafo12 parrafo12" "videoE videoE videoE videoE" "Felici Felici Felici Felici" "boton boton boton boton";
+      grid-template-rows: 1em 45em 20em 45em 28em 25em 30em 15em 25em 320em 30em 100em 45em 30em 20em 30em 10em 40em;
+      grid-template-areas: "imagen imagen imagen imagen" "titulo titulo titulo titulo" "Introduccion Introduccion Introduccion Introduccion" "parrafo1 parrafo1 parrafo1 parrafo1" "parrafo2 parrafo2 parrafo2 parrafo2" "parrafo3 parrafo3 parrafo3 parrafo3" "parrafo4 parrafo4 parrafo4 parrafo4" "parrafo5 parrafo5 parrafo5 parrafo5" "parrafo6 parrafo6 parrafo6 parrafo6" "parrafo7 parrafo7 parrafo7 parrafo7" "parrafo8 parrafo8 parrafo8 parrafo8" "parrafo9 parrafo9 parrafo9 parrafo9" "parrafo10 parrafo10 parrafo10 parrafo10" "parrafo11 parrafo11 parrafo11 parrafo11" "parrafo12 parrafo12 parrafo12 parrafo12" "Felici Felici Felici Felici" "boton boton boton boton";
       justify-items: center;
       align-items: center;
       text-align: left; }
       #grillaCursos #grillaCursosM .imagenCurso {
-        grid-area: imagen; }
+        grid-area: imagen;
+        justify-items: center;
+        align-items: center;
+        text-align: center; }
       #grillaCursos #grillaCursosM .titulo {
         grid-area: titulo; }
       #grillaCursos #grillaCursosM .Introduccion {
+        background-color: #2889da;
         grid-area: Introduccion;
-        width: 100%;
-        height: 100%; }
+        width: 50%;
+        height: 100%;
+        justify-items: center;
+        align-items: center;
+        text-align: left;
+        position: relative;
+        bottom: 15em; }
+        #grillaCursos #grillaCursosM .Introduccion h3 {
+          text-align: center; }
+        #grillaCursos #grillaCursosM .Introduccion ul {
+          list-style: none; }
       #grillaCursos #grillaCursosM .parrafo1 {
         grid-area: parrafo1;
         background-color: #e6dede;
@@ -426,7 +445,9 @@ a:hover {
         background-color: #e6dede;
         width: 70%;
         height: 100%;
-        margin: 5em; }
+        margin: 5em;
+        position: relative;
+        top: 5.5em; }
       #grillaCursos #grillaCursosM .parrafo6 {
         grid-area: parrafo6;
         background-color: #e6dede;
@@ -444,7 +465,9 @@ a:hover {
         background-color: #e6dede;
         width: 70%;
         height: 100%;
-        margin: 5em; }
+        margin: 5em;
+        position: relative;
+        top: 5em; }
       #grillaCursos #grillaCursosM .parrafo9 {
         grid-area: parrafo9;
         background-color: #e6dede;
@@ -469,11 +492,6 @@ a:hover {
         width: 70%;
         height: 100%;
         margin: 5em; }
-      #grillaCursos #grillaCursosM .video-Imagenes-Parrafo {
-        grid-area: videoE; }
-        #grillaCursos #grillaCursosM .video-Imagenes-Parrafo video {
-          width: 30%;
-          height: 30%; }
       #grillaCursos #grillaCursosM .finalizacion {
         grid-area: Felici; }
       #grillaCursos #grillaCursosM .irAlFormulario {

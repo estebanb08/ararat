@@ -130,12 +130,33 @@ footer{
     }
 }
 
+
+
+// texto Estilo 
 .estoVaEnRojo{
     color: red;
 }
 
+b{
+    color: rgb(196, 95, 95);
+}
+
 .sinEstiloUL{
     list-style: none;
+}
+
+p{
+    margin: 0;
+}
+
+//CursoCovid
+.Introduccion{
+    ul{
+        li{
+           padding: 0.3em; 
+        }
+    }
+    
 }
 
 // INDEX
@@ -225,10 +246,7 @@ a:hover{
     color: rgb(71, 68, 68);
 }
 
-//tipo de letra
-.negrita{
-    font-style: bold;
-}
+
 
 
 @media only screen and (min-width:600px){
@@ -443,9 +461,8 @@ a:hover{
     #grillaCursos{
         display: grid;
         grid-template-columns: 25% 25% 25% 25%;
-        grid-template-rows: 5% 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 20em;
+        grid-template-rows: 40em 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 20em;
         grid-template-areas: "header header header header"
-                             "main main main main"
                              "main main main main"
                              "main main main main"
                              "main main main main"
@@ -474,10 +491,10 @@ a:hover{
         }
         #grillaCursosM{
             grid-area: main;
+            font-size: 1.2vw;
             display: grid;
-            grid-row: 1em;
             grid-template-columns: 25% 25% 25% 25%;
-            grid-template-rows: 55em 10em 30em 35em 28em 25em 30em 15em 25em 210em 30em 65em 30em 30em 20em 30em 10em 10em 30em;
+            grid-template-rows:1em 45em 20em 45em 28em 25em 30em 15em 25em 320em 30em 100em 45em 30em 20em 30em 10em 40em;
             grid-template-areas: "imagen imagen imagen imagen"
                                 "titulo titulo titulo titulo"
                                 "Introduccion Introduccion Introduccion Introduccion"
@@ -493,13 +510,14 @@ a:hover{
                                 "parrafo10 parrafo10 parrafo10 parrafo10"
                                 "parrafo11 parrafo11 parrafo11 parrafo11"
                                 "parrafo12 parrafo12 parrafo12 parrafo12"
-                                "videoE videoE videoE videoE"
+                                // "videoE videoE videoE videoE"
                                 "Felici Felici Felici Felici"
                                 "boton boton boton boton";
             @include posicionamiento-items-parrafo();
             
             .imagenCurso{
                 grid-area: imagen;
+                @include posicionamiento-items();
             }
 
             .titulo{
@@ -507,8 +525,19 @@ a:hover{
             }
 
             .Introduccion{
+                background-color: rgb(40, 137, 218);;
+                h3{
+                    text-align: center;
+                }
                 grid-area: Introduccion;
-                @include tamaños(100%, 100%);
+                @include tamaños(50%, 100%);
+                @include posicionamiento-items-parrafo();
+                position: relative;
+                bottom: 15em;
+
+                ul{
+                    list-style: none;
+                }
                 
             }
 
@@ -545,6 +574,8 @@ a:hover{
                 background-color: rgb(230, 222, 222);
                 @include tamaños(70%, 100%);
                 @include espaciosBordesParrafos();
+                position: relative;
+                top: 5.5em;
               //va bien
             }
             .parrafo6{
@@ -566,6 +597,8 @@ a:hover{
                 background-color: rgb(230, 222, 222);
                 @include tamaños(70%, 100%);
                 @include espaciosBordesParrafos();
+                position: relative;
+                top: 5em;
               //va bien
             }
             .parrafo9{
@@ -597,13 +630,14 @@ a:hover{
               //va bien
             }
 
-            .video-Imagenes-Parrafo{
-                grid-area: videoE;
+            // .video-Imagenes-Parrafo{
+            //     grid-area: videoE;
+            //     @include posicionamiento-items();
 
-                video{
-                    @include tamaños(30% , 30%);
-                }
-            }
+            //     video{
+            //         @include tamaños(30% , 30%);
+            //     }
+            // }
 
             .finalizacion{
                 grid-area: Felici;
