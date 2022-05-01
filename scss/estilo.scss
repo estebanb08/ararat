@@ -1,3 +1,11 @@
+// body{
+//     li{
+//        font-size: 2vw; 
+//     }
+    
+// }
+
+
 @import "colores.scss";
 
 @mixin tamaños($width, $height){
@@ -50,7 +58,7 @@
 
 @mixin espaciosBordesParrafos {
     margin: 5em;
-    
+    font-size: 1.2vw;
 }
 
 body{
@@ -152,12 +160,45 @@ p{
 //CursoCovid
 .Introduccion{
     ul{
-        li{
-           padding: 0.3em; 
-        }
+        list-style: none;
+            li{
+            padding: 0.3em;
+                a{
+                    color: black;  
+                }
+                a:hover{
+                    color: grey;
+                }
+            }
+            
     }
-    
+    @include tamaños(50%, 100%);
+    @include posicionamiento-items-parrafo();      
+    background-color: rgb(40, 137, 218);
+    padding-bottom: 30em;
+    h3{
+        text-align: center;
+    }  
+
 }
+h3{
+    font-size: 1.5vw;
+}
+
+ol{
+    padding: 1.5em;
+    li{
+        padding: 0.2em;
+    }
+}
+
+ul{
+    padding: 1.5em;
+    li{
+        padding: 0.2em
+    }
+}
+
 
 // INDEX
 
@@ -233,12 +274,25 @@ p{
         }
     } 
 }
-
+.finalizacion{
+    position: relative;
+    bottom: 8em;
+}
 .irAlFormulario{
+    background-color: rgb(20, 20, 187);
+    border-radius: 1vw;
+    padding: 0.8em;
     a{
         text-decoration: none;
-        color: black;
+        color: rgb(255, 255, 255);
     }
+    position: relative;
+    bottom: 3em;
+    
+}
+
+.irAlFormulario:hover{
+    @include agrandaElemento();
 }
 
 
@@ -461,9 +515,8 @@ a:hover{
     #grillaCursos{
         display: grid;
         grid-template-columns: 25% 25% 25% 25%;
-        grid-template-rows: 40em 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 20em;
+        grid-template-rows: 40em 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 20em;
         grid-template-areas: "header header header header"
-                             "main main main main"
                              "main main main main"
                              "main main main main"
                              "main main main main"
@@ -494,7 +547,7 @@ a:hover{
             font-size: 1.2vw;
             display: grid;
             grid-template-columns: 25% 25% 25% 25%;
-            grid-template-rows:1em 45em 20em 45em 28em 25em 30em 15em 25em 320em 30em 100em 45em 30em 20em 30em 10em 40em;
+            grid-template-rows:1em 45em 20em 45em 28em 25em 30em 15em 25em 480em 25em 115em 45em 30em 15em 5em 5em;
             grid-template-areas: "imagen imagen imagen imagen"
                                 "titulo titulo titulo titulo"
                                 "Introduccion Introduccion Introduccion Introduccion"
@@ -511,8 +564,7 @@ a:hover{
                                 "parrafo11 parrafo11 parrafo11 parrafo11"
                                 "parrafo12 parrafo12 parrafo12 parrafo12"
                                 // "videoE videoE videoE videoE"
-                                "Felici Felici Felici Felici"
-                                "boton boton boton boton";
+                                "siguiente siguiente siguiente siguiente";
             @include posicionamiento-items-parrafo();
             
             .imagenCurso{
@@ -525,19 +577,11 @@ a:hover{
             }
 
             .Introduccion{
-                background-color: rgb(40, 137, 218);;
-                h3{
-                    text-align: center;
-                }
                 grid-area: Introduccion;
-                @include tamaños(50%, 100%);
-                @include posicionamiento-items-parrafo();
                 position: relative;
                 bottom: 15em;
 
-                ul{
-                    list-style: none;
-                }
+
                 
             }
 
@@ -575,7 +619,7 @@ a:hover{
                 @include tamaños(70%, 100%);
                 @include espaciosBordesParrafos();
                 position: relative;
-                top: 5.5em;
+                top: 2.5em;
               //va bien
             }
             .parrafo6{
@@ -583,6 +627,8 @@ a:hover{
                 background-color: rgb(230, 222, 222);
                 @include tamaños(70%, 100%);
                 @include espaciosBordesParrafos();
+                position: relative;
+                top: 2em;
               //va bien
             }
             .parrafo7{
@@ -606,6 +652,8 @@ a:hover{
                 background-color: rgb(230, 222, 222);
                 @include tamaños(70%, 100%);
                 @include espaciosBordesParrafos();
+                margin-top: 20em;
+
               //va bien
             }
             .parrafo10{
@@ -613,6 +661,7 @@ a:hover{
                 background-color: rgb(230, 222, 222);
                 @include tamaños(70%, 100%);
                 @include espaciosBordesParrafos();
+                margin-top: 30em;
               //va bien
             }
             .parrafo11{
@@ -651,10 +700,85 @@ a:hover{
                 a{
                     color: black;
                 }
+
+            }
+        }
+    }
+
+    #grillaCursos2{
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-rows: 10em 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 10em;
+        grid-template-areas: "header header header header"
+                            "main main main main"
+                            "main main main main"
+                            "main main main main"
+                            "main main main main"
+                            "main main main main"
+                            "main main main main"
+                            "main main main main"
+                            "main main main main"
+                            "main main main main"
+                            "main main main main"
+                            "footer footer footer footer";
+
+
+        .navbar{
+            grid-area: header;
+        }
+
+        footer{
+            grid-area: footer;
+        }
+
+
+         #grillaCursosM2{
+             grid-area: main;
+             display: grid;
+             grid-template-columns: 25% 25% 25% 25%;
+             grid-template-rows: 60em 5em 30em 60em 80em 1em 10em;
+             grid-template-areas:"imagen imagen imagen imagen"
+                                 "titulo titulo titulo titulo"
+                                 "titulo2 titulo2 titulo2 titulo2"
+                                 "limpieza limpieza limpieza limpieza"
+                                 "alcohol alcohol alcohol alcohol"
+                                 "completo completo completo completo"
+                                 "formulario formulario formulario formulario"
+                                 "volver volver volver volver";
+            @include posicionamiento-items();
+
+
+            .imagenCurso{
+                grid-area: imagen;
+            }
+
+            .titulo{
+                grid-area: titulo;
+            }
+            .titulo22{
+                grid-area: titulo2;
+            }
+
+            .Anexo1{
+                grid-area: limpieza;
+            }
+
+            .anexo2{
+                grid-area: alcohol;
+            }
+
+            .finalizacion{
+                grid-area: completo;
+            }
+
+            .irAlFormulario{
+                grid-area: formulario;
             }
         }
     }
 }
+
+
 
 @media only screen and (max-width:600px){
 
@@ -946,7 +1070,7 @@ a:hover{
                                 "parrafo"
                                 "video-imagenes-parrafos"
                                 "finalizacion"
-                                "formulario";
+                                "formulario formulario formulario formulario";
             @include posicionamiento-items();
 
             .imagenCurso{
