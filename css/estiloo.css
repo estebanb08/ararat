@@ -96,6 +96,16 @@ ul {
   ul li {
     padding: 0.2em; }
 
+form {
+  position: relative;
+  left: 160%;
+  bottom: 180%; }
+  form button {
+    position: relative;
+    left: 43%; }
+  form .IrPagina {
+    background-color: blue; }
+
 .videoInicio {
   width: 100%;
   height: 100%; }

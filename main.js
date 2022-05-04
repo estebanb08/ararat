@@ -13,6 +13,54 @@ const multiplicacion = (a,b) => a * b;
 const division = (a,b) => a / b;
 
 
+
+var text = document.getElementById("nombreUsuario");
+var password = document.getElementById("password").value;
+console.log("Usuario: " + text.value);
+console.log("Contraseña: " + password);
+console.log("Título: " + text.title);
+text.title = "Ingresá EL NOMBRE DE LA EMPRESA"; 
+
+ function validarFormulario() {
+    if ((password == "") || (password.length == 0)) {
+        let resultado = document.getElementById("resultado");
+        resultado.innerHTML = "Ingresá tu Contraseña!";
+        resultado.className = "p-3 mb-2 bg-dark text-white";
+    } else {
+        resultado.innerHTML = "";
+        resultado.className = "";
+    }
+}
+
+validarFormulario();
+
+
+function usuarioFalso(){
+    if((text == "CursoCovid19")){
+        let usuarioVerdadero = document.getElementById("nombreUsuario");
+        usuarioVerdadero.innerHTML ="Presiona Enviar";
+        usuarioVerdadero.className = '<button type="submit" class="btn btn-primary"><a href="CursoCovid19.html"> Submit</a></button>';
+    }else{
+        resultado2.innerHTML = "Ingresá tu Nombre de usuario!";
+            resultado2.className = "p-3 mb-2 bg-dark text-white";
+    }
+}
+function obtenerDatos() {
+    var text = document.getElementById("nombreUsuario").value;
+    var contrasena = document.getElementById("password").value;}
+// // Asignar valores
+document.getElementById("nombreUsuario").value = "CursoCovid19";
+document.getElementById("password").value = "Covid2022";
+
+/*
+    var elemento = document.createElement("p");
+    elemento.innerHTML = `Mi Empresa es: ${text} y mi contraseña es: ${contrasena}`;
+    document.body.appendChild(elemento);
+}*/
+
+
+
+
 const productos = [
     {ID: 1, nombreC: 'COVID'},
     {ID: 2, nombreC: 'RIEGOS LABORABLES'},
@@ -22,7 +70,6 @@ const productos = [
 
 const nombresC = productos.map((el) => el.nombreC);
 console.log(nombresC);
-
 
                                 
 //usuario
@@ -36,7 +83,6 @@ class Usuario {
 const NuevoUsuario = new Usuario("Esteban Bullon", 25);
 alert("Hola " + NuevoUsuario.Nombre);
 
-
 class Cantidad {
     constructor (CantUsuarios){
         this.CantUsuarios = parseInt(prompt("¿Que cantidad de personas van a ser?"));
@@ -46,7 +92,6 @@ class Cantidad {
 const ListadoDeNombre = [];
 const NuevaLista = new Cantidad();
     console.log(`Cantidad de usuarios, ${NuevaLista.CantUsuarios}`);
-
 
 var UsuariosCant = NuevaLista.CantUsuarios;
 do{
@@ -58,9 +103,7 @@ do{
     ListadoDeNombre.push(nombres1.toUpperCase());
 alert("Usuarios Ingresados: " + ListadoDeNombre.length);
 
-
 let FinalLista = ListadoDeNombre;
-
 
 
 
@@ -72,9 +115,7 @@ console.log(buscador);
 alert("El producto que buscaste: no se encuentra en nuestro sistema");
 
 
-
 let cursoNombres;
-
 
 do {  
     cursoNombres = prompt("¿Que curso desea elegir (Covid, Riesgos laborables, Proteccion de extremidades, Escalera Manual)? (sujeto a que por personas sale $5.000).").toUpperCase();
@@ -84,7 +125,6 @@ do {
     }
     
 } while (cursoNombres != (nombresC[0]) || cursoNombres != (nombresC[1]) || cursoNombres != (nombresC[2]) || cursoNombres != (nombresC[3]));
-
 
 
 
@@ -115,10 +155,8 @@ if (formasDePago == "DEBITO"){
 
 
 
-
 //cuanto paga
 let precioFinal= costoDeLosCursos * UsuariosCant;
-
 
 //Descuento FUNCIONA
 const descuentoD = x => (descuento / 100) * x;
@@ -133,7 +171,6 @@ if (precioFinal >= costoDeLosCursosMax) {
     precioFinal = precioFinal;
     DescuentoAplicado = false;
 }
-
 
 //cuotas
 const funcionCuotas = (a, b) => a + ((a * b) / 100 ); //FUNCIONA
@@ -176,7 +213,6 @@ if ((cuotas == 0) || (cuotas == 1)) {
 //LO QUE VE EL USUARIO ES
 
 
-
 let mensaje = suma(NuevoUsuario.Nombre , (suma(suma(", así quedó tu carrito. Curso: ", cursoNombres), (". "))));
 mensaje += suma(suma(" Precio por usuario $", costoDeLosCursos), (". "));
 mensaje += suma(suma(" Personas que van a poder hacer el curso ", FinalLista), (". "));
@@ -190,7 +226,6 @@ if (InteresAplicado){
     mensaje += suma(suma(" Interes de ", Intereses),("%. "));
 } 
 
-
 if((cuotas >= 2) && (cuotas<=12)){
     mensaje += suma(suma(" Total a pagar $", TotalApagarCuotasFinal),(". "));
     mensaje += suma(suma(" Cuotas: ", cuotas , "%, total a Pagar: "), (TotalApagarCuotas, ". "));
@@ -201,6 +236,9 @@ if((cuotas >= 2) && (cuotas<=12)){
 }
 
 
-
 alert(mensaje);
 console.log(mensaje);
+
+
+
+
