@@ -52,11 +52,7 @@ function obtenerDatos() {
 document.getElementById("nombreUsuario").value = "CursoCovid19";
 document.getElementById("password").value = "Covid2022";
 
-/*
-    var elemento = document.createElement("p");
-    elemento.innerHTML = `Mi Empresa es: ${text} y mi contraseña es: ${contrasena}`;
-    document.body.appendChild(elemento);
-}*/
+
 
 
 
