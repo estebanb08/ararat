@@ -209,6 +209,33 @@ form {
 a:hover {
   color: #474444; }
 
+#contenedor div {
+  position: relative;
+  left: 10%;
+  background-color: white;
+  transition: all .3s;
+  border: solid lightgray 1px;
+  border-bottom: solid #b6b6b6 2px;
+  border-radius: 8px;
+  width: 80%;
+  height: 70%;
+  justify-items: center;
+  align-items: center;
+  text-align: center; }
+  #contenedor div:hover {
+    transform: scale(1.15, 1.15); }
+  #contenedor div:hover {
+    border: solid #a8a8a8 0.5px;
+    box-shadow: 0px 1px 5px 5px #c2bfbf; }
+  #contenedor div img {
+    width: 90%;
+    height: 30%;
+    padding: 2%; }
+  #contenedor div svg {
+    padding: 5%; }
+  #contenedor div p {
+    padding: 1%; }
+
 @media only screen and (min-width: 600px) {
   #grillaIndex {
     display: grid;
@@ -592,9 +619,60 @@ a:hover {
       #grillaCursos2 #grillaCursosM2 .finalizacion {
         grid-area: completo; }
       #grillaCursos2 #grillaCursosM2 .irAlFormulario {
-        grid-area: formulario; } }
+        grid-area: formulario; }
+  #grillaIndexCursos {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto 1fr 1fr 10em;
+    grid-template-areas: "header header" "main main" "main main" "footer footer"; }
+    #grillaIndexCursos .navbar {
+      grid-area: header; }
+    #grillaIndexCursos footer {
+      grid-area: footer; }
+  #grillaIndexCursosM {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas: "div div" "div div"; }
+    #grillaIndexCursosM #contenedor {
+      grid-area: div;
+      display: grid;
+      grid-template-columns: 50% 50%;
+      grid-template-rows: 50% 50%;
+      grid-template-areas: "div1 div1" "div1 div1"; }
+      #grillaIndexCursosM #contenedor .card {
+        grid-area: div1; }
+  /*            
+                    grid-template-columns: 50% 50%;
+                    grid-template-rows: 50% 50%;
+                    grid-template-areas: "div1 div2"
+                                         "div3 div4";
+                    
+                    .div1{
+                        grid-area: div1;
+                        
+                    }
+                    .div2{
+                        grid-area: div2;
+                        
+                    }
 
-@media only screen and (max-width: 600px) {
+                    .div3{
+                        grid-area: div3;
+                        
+                    }
+                    .div4{
+                        grid-area: div4;
+                        
+                    }
+                }
+        }
+    }
+
+*/ }
+
+@media only screen and (min-width: 600px) and (max-width: 600px) {
   footer {
     background-color: #247f9b;
     width: 100%;
@@ -856,3 +934,146 @@ a:hover {
         grid-area: finalizacion; }
       #grillaCursos #grillaCursosM .irAlFormulario {
         grid-area: formulario; } }
+
+@media only screen and (min-width: 600px) {
+  .card {
+    background-color: white;
+    transition: all .3s;
+    border: solid lightgray 1px;
+    border-bottom: solid #b6b6b6 2px;
+    border-radius: 8px;
+    width: 60%;
+    height: 70%;
+    justify-items: center;
+    align-items: center;
+    text-align: center; }
+    .card:hover {
+      transform: scale(1.15, 1.15); }
+    .card:hover {
+      border: solid #a8a8a8 0.5px;
+      box-shadow: 0px 1px 5px 5px #c2bfbf; }
+  .menu {
+    font-size: 28px; }
+  .car__icon {
+    margin: 15px;
+    font-size: 36px;
+    display: flex;
+    justify-content: center; }
+  #count__cart {
+    background-color: #fc584c;
+    padding: 5px;
+    border-radius: 50%;
+    color: white;
+    font-size: 16px;
+    display: none;
+    min-width: 33px;
+    text-align: center; }
+  .titulo {
+    text-align: center;
+    margin-bottom: 20px; }
+  #container {
+    margin-bottom: 30px; }
+  .cargar {
+    width: auto; }
+  .Detalle {
+    font-weight: bold; }
+  .compra-parrafo {
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding: 20px;
+    border: 1px, solid, black !important;
+    border-radius: 15px; }
+  .datos-cliente {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px; }
+  .datos-parrafo {
+    font-weight: 600;
+    font-size: 1.2rem; }
+  .contact__secction__item {
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px; }
+  .contact-button {
+    display: flex;
+    justify-content: center;
+    font-size: 1.3rem; }
+  .envio {
+    margin-top: 15px; }
+  .mensaje-final {
+    font-weight: bold;
+    font-size: 1.3rem;
+    padding: 20px;
+    border: 1px, solid, black;
+    border-radius: 15px;
+    margin: 20px;
+    text-align: center; }
+  .cart-container {
+    height: 100vh;
+    width: 100vw;
+    margin: auto;
+    padding: 20px;
+    background: #bde1e5;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s ease-in; }
+  .cart-opened {
+    visibility: visible;
+    opacity: 1; }
+  #cart {
+    background: white;
+    width: 100%;
+    height: 90vh;
+    border-radius: 5px;
+    padding: 2vw;
+    display: flex;
+    flex-direction: column;
+    overflow: scroll; }
+  .cart {
+    padding: 20px;
+    background: #ffffff; }
+  .car-img {
+    width: 80px;
+    height: 80px;
+    margin: 10px; }
+  .producto-carrito {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center; }
+  .total-carrito {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  .finalizar {
+    width: 20%; }
+  #remove-product {
+    width: 100px;
+    height: 60px;
+    text-align: center; }
+  .total {
+    font-weight: bold;
+    font-size: 1.2rem;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    background: #ffffff;
+    border-radius: 4px;
+    margin-bottom: 10px; }
+  .compra-finalizada {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    margin-top: 50px;
+    background: #f75b4f; }
+  #cartButtons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; }
+  .removeButton {
+    visibility: hidden; } }
