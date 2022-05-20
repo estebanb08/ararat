@@ -435,10 +435,7 @@ a:hover {
       display: grid;
       grid-template-columns: 25% 25% 25% 25%;
       grid-template-rows: 1em 45em 20em 45em 28em 25em 30em 15em 25em 480em 25em 115em 45em 30em 15em 5em 5em;
-      grid-template-areas: "imagen imagen imagen imagen" "titulo titulo titulo titulo" "Introduccion Introduccion Introduccion Introduccion" "parrafo1 parrafo1 parrafo1 parrafo1" "parrafo2 parrafo2 parrafo2 parrafo2" "parrafo3 parrafo3 parrafo3 parrafo3" "parrafo4 parrafo4 parrafo4 parrafo4" "parrafo5 parrafo5 parrafo5 parrafo5" "parrafo6 parrafo6 parrafo6 parrafo6" "parrafo7 parrafo7 parrafo7 parrafo7" "parrafo8 parrafo8 parrafo8 parrafo8" "parrafo9 parrafo9 parrafo9 parrafo9" "parrafo10 parrafo10 parrafo10 parrafo10" "parrafo11 parrafo11 parrafo11 parrafo11" "parrafo12 parrafo12 parrafo12 parrafo12" "siguiente siguiente siguiente siguiente";
-      justify-items: center;
-      align-items: center;
-      text-align: left; }
+      grid-template-areas: "imagen imagen imagen imagen" "titulo titulo titulo titulo" "Introduccion Introduccion Introduccion Introduccion" "parrafo1 parrafo1 parrafo1 parrafo1" "parrafo2 parrafo2 parrafo2 parrafo2" "parrafo3 parrafo3 parrafo3 parrafo3" "parrafo4 parrafo4 parrafo4 parrafo4" "parrafo5 parrafo5 parrafo5 parrafo5" "parrafo6 parrafo6 parrafo6 parrafo6" "parrafo7 parrafo7 parrafo7 parrafo7" "parrafo8 parrafo8 parrafo8 parrafo8" "parrafo9 parrafo9 parrafo9 parrafo9" "parrafo10 parrafo10 parrafo10 parrafo10" "parrafo11 parrafo11 parrafo11 parrafo11" "parrafo12 parrafo12 parrafo12 parrafo12" "siguiente siguiente siguiente siguiente"; }
       #grillaCursos #grillaCursosM .imagenCurso {
         grid-area: imagen;
         justify-items: center;
@@ -582,7 +579,171 @@ a:hover {
       #grillaCursos2 #grillaCursosM2 .finalizacion {
         grid-area: completo; }
       #grillaCursos2 #grillaCursosM2 .irAlFormulario {
-        grid-area: formulario; } }
+        grid-area: formulario; }
+  #grillaCursoEscalera {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: auto 50em 50em 50em 50em 50em 50em 50em 50em 50em 50em 50em 60em 60em 60em 60em 60em auto;
+    grid-template-areas: "header header header header" "main main main main" "main main main main" "main main main main" "main main main main" "main main main main" "main main main main" "main main main main" "main main main main" "main main main main" "main main main main" "main main main main" "main main main main" "main main main main" "main main main main" "main main main main" "main main main main" "footer footer footer footer"; }
+    #grillaCursoEscalera .navbar {
+      grid-area: header; }
+    #grillaCursoEscalera footer {
+      grid-area: footer; }
+    #grillaCursoEscalera #grillaCursoEscaleraM {
+      grid-area: main;
+      display: grid;
+      grid-template-columns: 25% 25% 25% 25%;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-areas: "imagen imagen imagen imagen"  "titulo titulo titulo titulo" "parrafo1 parrafo1 parrafo1 parrafo1" "parrafo2 parrafo2 parrafo2 parrafo2" "parrafo3 parrafo3 parrafo3 parrafo3" "parrafo4 parrafo4 parrafo4 parrafo4" "parrafo5 parrafo5 parrafo5 parrafo5" "parrafo6 parrafo6 parrafo6 parrafo6" "parrafo7 parrafo7 parrafo7 parrafo7" "parrafo8 parrafo8 parrafo8 parrafo8" "parrafo9 parrafo9 parrafo9 parrafo9" "parrafo10 parrafo10 parrafo10 parrafo10" "parrafo11 parrafo11 parrafo11 parrafo11" "parrafo12 parrafo12 parrafo12 parrafo12" "fina fina fina fina" "form form form form";
+      justify-items: center;
+      align-items: center;
+      text-align: center; }
+      #grillaCursoEscalera #grillaCursoEscaleraM p {
+        text-align: justify; }
+      #grillaCursoEscalera #grillaCursoEscaleraM li {
+        text-align: left;
+        margin-bottom: 1em; }
+      #grillaCursoEscalera #grillaCursoEscaleraM img {
+        width: 60%;
+        margin-bottom: 5em; }
+      #grillaCursoEscalera #grillaCursoEscaleraM .imagenCursoEscalera {
+        grid-area: imagen;
+        justify-items: center;
+        align-items: center;
+        text-align: center; }
+      #grillaCursoEscalera #grillaCursoEscaleraM .titulo {
+        grid-area: titulo; }
+      #grillaCursoEscalera #grillaCursoEscaleraM .parrafo1 {
+        grid-area: parrafo1;
+        background-color: #e6dede;
+        width: 70%;
+        height: 100%;
+        margin: 5em;
+        font-size: 1.2vw; }
+      #grillaCursoEscalera #grillaCursoEscaleraM .parrafo2 {
+        grid-area: parrafo2;
+        background-color: #e6dede;
+        width: 70%;
+        height: 100%;
+        margin: 5em;
+        font-size: 1.2vw; }
+      #grillaCursoEscalera #grillaCursoEscaleraM .parrafo3 {
+        grid-area: parrafo3;
+        background-color: #e6dede;
+        width: 70%;
+        height: 100%;
+        margin: 5em;
+        font-size: 1.2vw; }
+      #grillaCursoEscalera #grillaCursoEscaleraM .parrafo4 {
+        grid-area: parrafo4;
+        background-color: #e6dede;
+        width: 70%;
+        height: 100%;
+        margin: 5em;
+        font-size: 1.2vw; }
+      #grillaCursoEscalera #grillaCursoEscaleraM .parrafo5 {
+        grid-area: parrafo5;
+        background-color: #e6dede;
+        width: 70%;
+        height: 100%;
+        margin: 5em;
+        font-size: 1.2vw; }
+      #grillaCursoEscalera #grillaCursoEscaleraM .parrafo6 {
+        grid-area: parrafo6;
+        background-color: #e6dede;
+        width: 70%;
+        height: 100%;
+        margin: 5em;
+        font-size: 1.2vw; }
+      #grillaCursoEscalera #grillaCursoEscaleraM .parrafo7 {
+        grid-area: parrafo7;
+        background-color: #e6dede;
+        width: 70%;
+        height: 100%;
+        margin: 5em;
+        font-size: 1.2vw; }
+      #grillaCursoEscalera #grillaCursoEscaleraM .parrafo8 {
+        grid-area: parrafo8;
+        background-color: #e6dede;
+        width: 70%;
+        height: 100%;
+        margin: 5em;
+        font-size: 1.2vw; }
+      #grillaCursoEscalera #grillaCursoEscaleraM .parrafo9 {
+        grid-area: parrafo9;
+        background-color: #e6dede;
+        width: 70%;
+        height: 100%;
+        margin: 5em;
+        font-size: 1.2vw; }
+      #grillaCursoEscalera #grillaCursoEscaleraM .parrafo10 {
+        grid-area: parrafo10;
+        background-color: #e6dede;
+        width: 70%;
+        height: 100%;
+        margin: 5em;
+        font-size: 1.2vw; }
+      #grillaCursoEscalera #grillaCursoEscaleraM .parrafo11 {
+        grid-area: parrafo11;
+        background-color: #e6dede;
+        width: 70%;
+        height: 100%;
+        margin: 5em;
+        font-size: 1.2vw; }
+      #grillaCursoEscalera #grillaCursoEscaleraM .parrafo12 {
+        grid-area: parrafo12;
+        background-color: #e6dede;
+        width: 70%;
+        height: 100%;
+        margin: 5em;
+        font-size: 1.2vw; }
+      #grillaCursoEscalera #grillaCursoEscaleraM .finalizacion {
+        grid-area: fina; }
+      #grillaCursoEscalera #grillaCursoEscaleraM .irAlFormulario {
+        grid-area: form; }
+  #grillaCapEx {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: auto 40em 40em 40em 40em 40em 20em 20em 20em;
+    grid-template-areas: "header header header header" "main main main main" "main main main main" "main main main main" "main main main main" "main main main main" "main main main main" "main main main main" "footer footer footer footer"; }
+    #grillaCapEx .navbar {
+      grid-area: header; }
+    #grillaCapEx footer {
+      grid-area: footer; }
+    #grillaCapEx #grillaCapExM {
+      grid-area: main;
+      display: grid;
+      grid-template-columns: 25% 25% 25% 25%;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-areas: "imagen imagen imagen imagen" "titulo titulo titulo titulo" "parrafo parrafo parrafo parrafo" "parrafo1 parrafo1 parrafo1 parrafo1" "carrousel carrousel carrousel carrousel" "fina fina fina fina" "form form form form";
+      justify-items: center;
+      align-items: center;
+      text-align: center;
+      justify-items: center;
+      align-items: center;
+      text-align: left;
+      margin: 5em;
+      font-size: 1.2vw;
+      text-align: justify; }
+      #grillaCapEx #grillaCapExM .imagenCurso {
+        grid-area: imagen; }
+      #grillaCapEx #grillaCapExM .titulo {
+        grid-area: titulo; }
+      #grillaCapEx #grillaCapExM .parrafo {
+        grid-area: parrafo; }
+      #grillaCapEx #grillaCapExM .parrafo1 {
+        grid-area: parrafo1; }
+      #grillaCapEx #grillaCapExM .carousel {
+        grid-area: carrousel; }
+      #grillaCapEx #grillaCapExM .finalizacion {
+        margin-top: 12em;
+        grid-area: fina;
+        justify-items: center;
+        align-items: center;
+        text-align: center; }
+      #grillaCapEx #grillaCapExM .irAlFormulario {
+        text-align: center;
+        grid-area: form; } }
 
 @media only screen and (max-width: 600px) {
   footer {

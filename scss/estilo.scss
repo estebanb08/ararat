@@ -565,8 +565,8 @@ a:hover{
                                 "parrafo12 parrafo12 parrafo12 parrafo12"
                                 // "videoE videoE videoE videoE"
                                 "siguiente siguiente siguiente siguiente";
-            @include posicionamiento-items-parrafo();
-            
+
+                                
             .imagenCurso{
                 grid-area: imagen;
                 @include posicionamiento-items();
@@ -776,6 +776,258 @@ a:hover{
             }
         }
     }
+
+
+    #grillaCursoEscalera{
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-rows: auto 50em 50em 50em 50em 50em 50em 50em 50em 50em 50em 50em 60em 60em 60em 60em 60em auto;
+        grid-template-areas: "header header header header"
+                            "main main main main"
+                            "main main main main"
+                            "main main main main"
+                            "main main main main"
+                            "main main main main"
+                            "main main main main"
+                            "main main main main"
+                            "main main main main"
+                            "main main main main"
+                            "main main main main"
+                            "main main main main"
+                            "main main main main"
+                            "main main main main"
+                            "main main main main"
+                            "main main main main"
+                            "main main main main"
+                            "footer footer footer footer";
+
+        .navbar{
+            grid-area: header;
+        }
+
+        footer{
+            grid-area: footer;
+        }
+
+        
+
+        #grillaCursoEscaleraM{
+            grid-area: main;
+            display: grid;
+            grid-template-columns: 25% 25% 25% 25%;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-areas: "imagen imagen imagen imagen" 
+                                "titulo titulo titulo titulo"
+                                "parrafo1 parrafo1 parrafo1 parrafo1"
+                                "parrafo2 parrafo2 parrafo2 parrafo2"
+                                "parrafo3 parrafo3 parrafo3 parrafo3"
+                                "parrafo4 parrafo4 parrafo4 parrafo4"
+                                "parrafo5 parrafo5 parrafo5 parrafo5"
+                                "parrafo6 parrafo6 parrafo6 parrafo6"
+                                "parrafo7 parrafo7 parrafo7 parrafo7"
+                                "parrafo8 parrafo8 parrafo8 parrafo8"
+                                "parrafo9 parrafo9 parrafo9 parrafo9"
+                                "parrafo10 parrafo10 parrafo10 parrafo10"
+                                "parrafo11 parrafo11 parrafo11 parrafo11"
+                                "parrafo12 parrafo12 parrafo12 parrafo12"
+                                "fina fina fina fina"
+                                "form form form form";
+            @include posicionamiento-items();
+            p{
+                text-align: justify
+            }
+            li{
+                text-align: left;
+                margin-bottom: 1em;
+            }
+            img{
+                width: 60%;
+                margin-bottom: 5em;
+            }
+                                
+
+            .imagenCursoEscalera{
+                grid-area: imagen;
+                @include posicionamiento-items();
+            }
+
+            .titulo{
+                grid-area: titulo;
+            }
+
+            
+            .parrafo1{
+                grid-area: parrafo1;
+                    background-color: rgb(230, 222, 222);
+                    @include tamaños(70%, 100%);
+                    @include espaciosBordesParrafos();
+            }
+            .parrafo2{
+                grid-area: parrafo2;
+                    background-color: rgb(230, 222, 222);
+                    @include tamaños(70%, 100%);
+                    @include espaciosBordesParrafos();
+            }
+        
+            .parrafo3{
+                grid-area: parrafo3;
+                    background-color: rgb(230, 222, 222);
+                    @include tamaños(70%, 100%);
+                    @include espaciosBordesParrafos();
+            }
+        
+            .parrafo4{
+                grid-area: parrafo4;
+                    background-color: rgb(230, 222, 222);
+                    @include tamaños(70%, 100%);
+                    @include espaciosBordesParrafos();
+            }
+        
+            .parrafo5{
+                grid-area: parrafo5;
+                    background-color: rgb(230, 222, 222);
+                    @include tamaños(70%, 100%);
+                    @include espaciosBordesParrafos();
+            }
+        
+            .parrafo6{
+                grid-area: parrafo6;
+                    background-color: rgb(230, 222, 222);
+                    @include tamaños(70%, 100%);
+                    @include espaciosBordesParrafos();
+            }
+        
+            .parrafo7{
+                grid-area: parrafo7;
+                    background-color: rgb(230, 222, 222);
+                    @include tamaños(70%, 100%);
+                    @include espaciosBordesParrafos();
+            }
+        
+            .parrafo8{
+                grid-area: parrafo8;
+                    background-color: rgb(230, 222, 222);
+                    @include tamaños(70%, 100%);
+                    @include espaciosBordesParrafos();
+            }
+        
+            .parrafo9{
+                grid-area: parrafo9;
+                    background-color: rgb(230, 222, 222);
+                    @include tamaños(70%, 100%);
+                    @include espaciosBordesParrafos();
+            }
+        
+            .parrafo10{
+                grid-area: parrafo10;
+                    background-color: rgb(230, 222, 222);
+                    @include tamaños(70%, 100%);
+                    @include espaciosBordesParrafos();
+            }
+        
+            .parrafo11{
+                grid-area: parrafo11;
+                    background-color: rgb(230, 222, 222);
+                    @include tamaños(70%, 100%);
+                    @include espaciosBordesParrafos();
+            }
+        
+            .parrafo12{
+                grid-area: parrafo12;
+                    background-color: rgb(230, 222, 222);
+                    @include tamaños(70%, 100%);
+                    @include espaciosBordesParrafos();
+            }
+        
+        
+            .finalizacion{
+                grid-area: fina;
+            }
+
+            .irAlFormulario{
+                grid-area: form;
+            }
+    
+        }
+        
+    }
+
+
+
+#grillaCapEx{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: auto 40em 40em 40em 40em 40em 20em 20em 20em;
+    grid-template-areas: "header header header header"
+                        "main main main main"
+                        "main main main main"
+                        "main main main main"
+                        "main main main main"
+                        "main main main main"
+                        "main main main main"
+                        "main main main main"
+                        "footer footer footer footer";
+    .navbar{
+        grid-area: header;
+    }
+
+    footer{
+        grid-area: footer;
+    }
+
+    #grillaCapExM{
+        grid-area: main;
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: "imagen imagen imagen imagen"
+                            "titulo titulo titulo titulo"
+                            "parrafo parrafo parrafo parrafo"
+                            "parrafo1 parrafo1 parrafo1 parrafo1"
+                            "carrousel carrousel carrousel carrousel"
+                            "fina fina fina fina"
+                            "form form form form";
+        @include posicionamiento-items();
+        @include posicionamiento-items-parrafo();
+        @include espaciosBordesParrafos();
+        text-align: justify;
+
+        .imagenCurso{
+            grid-area: imagen;
+        }
+
+        .titulo{
+            grid-area: titulo;
+        }
+
+        .parrafo{
+            grid-area: parrafo;
+        }
+
+        .parrafo1{
+            grid-area: parrafo1;
+        }
+
+        .carousel{
+            grid-area: carrousel;
+        }
+
+        .finalizacion{
+            margin-top: 12em;
+            grid-area: fina;
+            @include posicionamiento-items();
+        }
+
+        .irAlFormulario{
+            text-align: center;
+            grid-area: form;
+        }
+    }
+}
+
+
+
+
 }
 
 
