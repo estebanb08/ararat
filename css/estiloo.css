@@ -1,15 +1,20 @@
+* {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; }
+
 body {
   height: 100%;
   background-color: #e9e3e3; }
 
 .navbar {
   width: 100%;
-  height: 6.8em;
+  height: auto;
   margin-bottom: 5%;
   align-items: flex-start; }
   .navbar img {
     width: 10%;
     text-align: left; }
+  .navbar ul.dropdown-menu {
+    width: 14em; }
   .navbar ul {
     width: 50%; }
     .navbar ul li {
@@ -198,6 +203,9 @@ ul {
 
 a:hover {
   color: #474444; }
+
+form {
+  border-radius: 1.5em; }
 
 @media only screen and (min-width: 600px) {
   #grillaIndex {
@@ -743,7 +751,31 @@ a:hover {
         text-align: center; }
       #grillaCapEx #grillaCapExM .irAlFormulario {
         text-align: center;
-        grid-area: form; } }
+        grid-area: form; }
+  #grillaValidacion {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: auto 40em auto;
+    grid-template-areas: "navbar navbar navbar navbar"  "main main main main"  "footer footer footer footer"; }
+    #grillaValidacion .navbar {
+      grid-area: navbar; }
+    #grillaValidacion footer {
+      grid-area: footer; }
+    #grillaValidacion #grillaValidacionM {
+      grid-area: main; }
+      #grillaValidacion #grillaValidacionM form {
+        position: relative;
+        padding: 2em;
+        left: 35%; }
+        #grillaValidacion #grillaValidacionM form input {
+          margin-bottom: 5em; }
+        #grillaValidacion #grillaValidacionM form button {
+          position: relative;
+          left: 40%; }
+  form {
+    background-color: rgba(182, 49, 49, 0.378);
+    height: 80%;
+    width: 30%; } }
 
 @media only screen and (max-width: 600px) {
   footer {
@@ -829,10 +861,7 @@ a:hover {
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: auto 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-areas: "navbar" "main" "main" "main" "main" "main" "main" "main" "main" "main" "footer";
-    justify-items: center;
-    align-items: center;
-    text-align: center; }
+    grid-template-areas: "navbar" "main" "main" "main" "main" "main" "main" "main" "main" "main" "footer"; }
     #grillaClientes .navbar {
       grid-area: navbar; }
     #grillaClientes footer {
@@ -843,7 +872,12 @@ a:hover {
       row-gap: 2em;
       grid-template-columns: 100%;
       grid-template-rows: 1fr 30em 30em 30em 30em 30em 30em 30em 30em;
-      grid-template-areas: "videoYtexto" "clientes1" "clientes2" "clientes3" "clientes4" "clientes5" "clientes6" "clientes7" "clientes8"; }
+      grid-template-areas: "videoYtexto" "clientes1" "clientes2" "clientes3" "clientes4" "clientes5" "clientes6" "clientes7" "clientes8";
+      justify-items: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      right: 12%; }
       #grillaClientes #grillaClientesM .imagenPresentacion {
         grid-area: videoYtexto; }
         #grillaClientes #grillaClientesM .imagenPresentacion img {
@@ -974,36 +1008,314 @@ a:hover {
   #grillaCursos {
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: auto 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-areas: "navbar" "main" "main" "main" "main" "main" "main" "main" "main" "footer"; }
+    grid-template-rows: auto 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr auto;
+    grid-template-areas: "header" "main" "main" "main" "main" "main" "main" "main" "main" "main" "main" "main" "main" "main" "main" "main" "main" "footer"; }
     #grillaCursos .navbar {
-      grid-area: navbar; }
+      grid-area: header; }
     #grillaCursos footer {
-      grid-area: footer; }
+      grid-area: footer;
+      position: relative;
+      top: 930em; }
     #grillaCursos #grillaCursosM {
+      height: 1500em;
       grid-area: main;
+      font-size: 1.2vw;
       display: grid;
       grid-template-columns: 100%;
-      grid-template-rows: 30em 10em 1fr 1fr 50em 15em 10em;
-      grid-template-areas: "imagen" "titulo" "Introduccion" "parrafo" "video-imagenes-parrafos" "finalizacion" "formulario formulario formulario formulario";
+      grid-template-rows: 60em 25em 100em auto auto auto auto auto auto auto auto auto auto auto auto auto 5em;
+      grid-template-areas: "imagen" "titulo" "Introduccion" "parrafo1" "parrafo2" "parrafo3" "parrafo4" "parrafo5" "parrafo6" "parrafo7" "parrafo8" "parrafo9" "parrafo10" "parrafo11" "parrafo12" "siguiente";
       justify-items: center;
       align-items: center;
       text-align: center; }
       #grillaCursos #grillaCursosM .imagenCurso {
         grid-area: imagen; }
+        #grillaCursos #grillaCursosM .imagenCurso img {
+          height: 100%;
+          width: 80%; }
       #grillaCursos #grillaCursosM .titulo {
-        grid-area: titulo; }
+        grid-area: titulo;
+        margin-bottom: 5em; }
       #grillaCursos #grillaCursosM .Introduccion {
-        grid-area: Introduccion; }
+        grid-area: Introduccion;
+        position: relative;
+        bottom: 5em;
+        font-size: 3vw; }
+      #grillaCursos #grillaCursosM h3 {
+        font-size: 4vw; }
       #grillaCursos #grillaCursosM .parrafo1 {
-        grid-area: parrafo;
+        grid-area: parrafo1;
+        background-color: #e6dede;
+        width: 70%;
+        height: 100%;
         margin: 5em;
-        font-size: 1.2vw; }
-      #grillaCursos #grillaCursosM video {
-        grid-area: video-imagenes-parrafos;
-        width: 80%;
-        height: 80%; }
+        font-size: 1.2vw;
+        font-size: 3vw;
+        text-align: justify; }
+      #grillaCursos #grillaCursosM .parrafo2 {
+        grid-area: parrafo2;
+        background-color: #e6dede;
+        width: 70%;
+        height: 100%;
+        margin: 5em;
+        font-size: 1.2vw;
+        font-size: 3vw;
+        text-align: justify; }
+      #grillaCursos #grillaCursosM .parrafo3 {
+        grid-area: parrafo3;
+        background-color: #e6dede;
+        width: 70%;
+        height: 100%;
+        margin: 5em;
+        font-size: 1.2vw;
+        font-size: 3vw;
+        text-align: justify; }
+      #grillaCursos #grillaCursosM .parrafo4 {
+        background-color: #e6dede;
+        width: 70%;
+        height: 100%;
+        margin: 5em;
+        font-size: 1.2vw;
+        font-size: 3vw;
+        text-align: justify; }
+      #grillaCursos #grillaCursosM .parrafo5 {
+        grid-area: parrafo5;
+        background-color: #e6dede;
+        width: 70%;
+        height: 100%;
+        margin: 5em;
+        font-size: 1.2vw;
+        font-size: 3vw;
+        text-align: justify; }
+      #grillaCursos #grillaCursosM .parrafo6 {
+        grid-area: parrafo6;
+        background-color: #e6dede;
+        width: 70%;
+        height: 100%;
+        margin: 5em;
+        font-size: 1.2vw;
+        font-size: 3vw;
+        text-align: justify; }
+      #grillaCursos #grillaCursosM .parrafo7 {
+        grid-area: parrafo7;
+        background-color: #e6dede;
+        width: 70%;
+        height: 100%;
+        margin: 5em;
+        font-size: 1.2vw;
+        font-size: 3vw;
+        text-align: justify; }
+      #grillaCursos #grillaCursosM .parrafo8 {
+        grid-area: parrafo8;
+        background-color: #e6dede;
+        width: 70%;
+        height: 100%;
+        margin: 5em;
+        font-size: 1.2vw;
+        font-size: 3vw;
+        text-align: justify; }
+      #grillaCursos #grillaCursosM .parrafo9 {
+        grid-area: parrafo9;
+        background-color: #e6dede;
+        width: 70%;
+        height: 100%;
+        margin: 5em;
+        font-size: 1.2vw;
+        font-size: 3vw;
+        text-align: justify; }
+      #grillaCursos #grillaCursosM .parrafo10 {
+        grid-area: parrafo10;
+        background-color: #e6dede;
+        width: 70%;
+        height: 100%;
+        margin: 5em;
+        font-size: 1.2vw;
+        font-size: 3vw;
+        text-align: justify; }
+      #grillaCursos #grillaCursosM .parrafo11 {
+        grid-area: parrafo11;
+        background-color: #e6dede;
+        width: 70%;
+        height: 100%;
+        margin: 5em;
+        font-size: 1.2vw;
+        font-size: 3vw;
+        text-align: justify; }
+      #grillaCursos #grillaCursosM .parrafo12 {
+        grid-area: parrafo12;
+        background-color: #e6dede;
+        width: 70%;
+        height: 100%;
+        margin: 5em;
+        font-size: 1.2vw;
+        font-size: 3vw;
+        text-align: justify; }
       #grillaCursos #grillaCursosM .finalizacion {
-        grid-area: finalizacion; }
+        grid-area: Felici; }
       #grillaCursos #grillaCursosM .irAlFormulario {
-        grid-area: formulario; } }
+        grid-area: boton;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap; }
+        #grillaCursos #grillaCursosM .irAlFormulario a {
+          color: black; }
+  #grillaCursos2 {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr auto;
+    grid-template-areas: "header" "main" "main" "main" "main" "main" "main" "main" "main" "main" "main" "footer"; }
+    #grillaCursos2 .navbar {
+      grid-area: header; }
+    #grillaCursos2 footer {
+      grid-area: footer; }
+    #grillaCursos2 #grillaCursosM2 {
+      grid-area: main;
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-rows: auto auto auto auto auto auto 10em auto;
+      grid-template-areas: "imagen" "titulo" "titulo2" "limpieza" "alcohol" "completo" "formulario" "volver";
+      justify-items: center;
+      align-items: center;
+      text-align: center; }
+      #grillaCursos2 #grillaCursosM2 img {
+        width: 60%; }
+      #grillaCursos2 #grillaCursosM2 .imagenCurso {
+        grid-area: imagen; }
+      #grillaCursos2 #grillaCursosM2 .titulo {
+        grid-area: titulo; }
+      #grillaCursos2 #grillaCursosM2 .titulo2 {
+        grid-area: titulo2; }
+      #grillaCursos2 #grillaCursosM2 .Anexo1 {
+        grid-area: limpieza; }
+      #grillaCursos2 #grillaCursosM2 .anexo2 {
+        grid-area: alcohol; }
+      #grillaCursos2 #grillaCursosM2 .finalizacion {
+        margin-top: 8em;
+        grid-area: completo;
+        position: relative;
+        top: .1vw; }
+      #grillaCursos2 #grillaCursosM2 .irAlFormulario {
+        grid-area: formulario; }
+  #grillaCursoEscalera {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: auto 50em 50em 50em 50em 50em 50em 50em 50em 50em 50em 50em 60em 60em 60em 60em 60em auto;
+    grid-template-areas: "header header header header" "main main main main" "main main main main" "main main main main" "main main main main" "main main main main" "main main main main" "main main main main" "main main main main" "main main main main" "main main main main" "main main main main" "main main main main" "main main main main" "main main main main" "main main main main" "main main main main" "footer footer footer footer"; }
+    #grillaCursoEscalera .navbar {
+      grid-area: header; }
+    #grillaCursoEscalera footer {
+      grid-area: footer; }
+    #grillaCursoEscalera #grillaCursoEscaleraM {
+      grid-area: main;
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-rows: 1fr 1fr auto auto auto auto auto auto auto auto auto auto auto auto 1fr 1fr;
+      grid-template-areas: "imagen"  "titulo" "parrafo1" "parrafo2" "parrafo3" "parrafo4" "parrafo5" "parrafo6" "parrafo7" "parrafo8" "parrafo9" "parrafo10" "parrafo11" "parrafo12" "fina" "form";
+      justify-items: center;
+      align-items: center;
+      text-align: center; }
+      #grillaCursoEscalera #grillaCursoEscaleraM p {
+        text-align: justify; }
+      #grillaCursoEscalera #grillaCursoEscaleraM li {
+        text-align: left;
+        margin-bottom: 1em; }
+      #grillaCursoEscalera #grillaCursoEscaleraM img {
+        width: 150%;
+        margin-bottom: 5em; }
+      #grillaCursoEscalera #grillaCursoEscaleraM .imagenCursoEscalera {
+        grid-area: imagen;
+        justify-items: center;
+        align-items: center;
+        text-align: center; }
+      #grillaCursoEscalera #grillaCursoEscaleraM .titulo {
+        grid-area: titulo; }
+      #grillaCursoEscalera #grillaCursoEscaleraM .parrafo1 {
+        grid-area: parrafo1;
+        background-color: #e6dede;
+        width: 70%;
+        height: 100%; }
+      #grillaCursoEscalera #grillaCursoEscaleraM .parrafo2 {
+        grid-area: parrafo2;
+        background-color: #e6dede;
+        width: 70%;
+        height: 100%; }
+      #grillaCursoEscalera #grillaCursoEscaleraM .parrafo3 {
+        grid-area: parrafo3;
+        background-color: #e6dede;
+        width: 70%;
+        height: 100%; }
+      #grillaCursoEscalera #grillaCursoEscaleraM .parrafo4 {
+        grid-area: parrafo4;
+        background-color: #e6dede;
+        width: 70%;
+        height: 100%; }
+      #grillaCursoEscalera #grillaCursoEscaleraM .parrafo5 {
+        grid-area: parrafo5;
+        background-color: #e6dede;
+        width: 70%;
+        height: 100%; }
+      #grillaCursoEscalera #grillaCursoEscaleraM .parrafo6 {
+        grid-area: parrafo6;
+        background-color: #e6dede;
+        width: 70%;
+        height: 100%; }
+      #grillaCursoEscalera #grillaCursoEscaleraM .parrafo7 {
+        grid-area: parrafo7;
+        background-color: #e6dede;
+        width: 70%;
+        height: 100%; }
+      #grillaCursoEscalera #grillaCursoEscaleraM .parrafo8 {
+        grid-area: parrafo8;
+        background-color: #e6dede;
+        width: 70%;
+        height: 100%; }
+      #grillaCursoEscalera #grillaCursoEscaleraM .parrafo9 {
+        grid-area: parrafo9;
+        background-color: #e6dede;
+        width: 70%;
+        height: 100%; }
+      #grillaCursoEscalera #grillaCursoEscaleraM .parrafo10 {
+        grid-area: parrafo10;
+        background-color: #e6dede;
+        width: 70%;
+        height: 100%; }
+      #grillaCursoEscalera #grillaCursoEscaleraM .parrafo11 {
+        grid-area: parrafo11;
+        background-color: #e6dede;
+        width: 70%;
+        height: 100%; }
+      #grillaCursoEscalera #grillaCursoEscaleraM .parrafo12 {
+        grid-area: parrafo12;
+        background-color: #e6dede;
+        width: 70%;
+        height: 100%; }
+      #grillaCursoEscalera #grillaCursoEscaleraM .finalizacion {
+        grid-area: fina; }
+      #grillaCursoEscalera #grillaCursoEscaleraM .irAlFormulario {
+        grid-area: form; }
+  #grillaValidacion {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto 40em auto;
+    grid-template-areas: "navbar"  "main"  "footer"; }
+    #grillaValidacion .navbar {
+      grid-area: navbar; }
+    #grillaValidacion footer {
+      grid-area: footer; }
+    #grillaValidacion #grillaValidacionM {
+      grid-area: main; }
+      #grillaValidacion #grillaValidacionM form {
+        width: 20em;
+        position: relative;
+        left: 10%;
+        padding: 2em;
+        font-size: 4vw; }
+        #grillaValidacion #grillaValidacionM form input {
+          margin-bottom: 4em; }
+        #grillaValidacion #grillaValidacionM form button {
+          position: relative;
+          margin-top: 1em;
+          left: 30%; }
+  form {
+    background-color: rgba(182, 49, 49, 0.378);
+    height: 30em;
+    width: 10em; } }
